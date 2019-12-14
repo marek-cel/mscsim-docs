@@ -1,9 +1,66 @@
-\documentclass{article}
+\documentclass[12pt,a4paper]{report}
+\special{papersize=210mm,297mm}
+
 \usepackage{amsmath}
+\usepackage{blindtext}
+\usepackage{enumitem}
+\usepackage{gensymb}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{isodate}
+\usepackage{longtable}
+
+\frenchspacing
+
+\linespread{1.3}
+
+\setlength{\parindent}{1em}
+\setlength{\parskip}{1em}
+
+\tolerance=1000
+\hyphenpenalty=100000
+
+\isodate
+
 \title{Flight Dynamics Model for the Real-Time Flight Simulation}
 \author{Marek Cel}
+\date{}
 
 \begin{document}
-    \maketitle
-    \date
+  
+  \begin{titlepage}
+    \setlength{\parskip}{0em}
+    \centering
+    {\huge Flight Dynamics Model for the Real-Time Flight Simulation\par}
+    \vfill
+    {\large Zielonka}
+    {\par \large \the\year}
+  \end{titlepage}
+
+  \noindent Copyright \copyright{} \the\year{} Marek M. Cel. All rights reserved.
+
+  \noindent Author: Marek M. Cel \\
+  Revision: 8 \\
+  Date: \today
+
+  \input{license_cc0}
+  
+  {
+    \clearpage
+    \setlength{\parskip}{0em}
+    \pdfbookmark{\contentsname}{toc}
+    \tableofcontents
+  }
+
+  \include{fdm_0_notation}
+  \include{fdm_1_introduction}
+  \include{fdm_2_fdm}
+  
+  \clearpage
+  \bibliography{bibliography} 
+  \addcontentsline{toc}{chapter}{Bibliography}
+  \bibliographystyle{ieeetr}
+  
 \end{document}

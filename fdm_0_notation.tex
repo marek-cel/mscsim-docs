@@ -1,0 +1,138 @@
+\clearpage %or \cleardoublepage
+\phantomsection
+\chapter*{Notation}
+\markright{}
+\addcontentsline{toc}{chapter}{Notation}
+
+\begin{longtable}[l]{ l l p{0.6\textwidth} }
+  $a$                                                    & -- & [m] ellipsoid equatorial radius \\
+  $a=\frac{dC_L}{da}$                                    & -- & [1/rad] lift curve slope \\
+  $A_R=\pi R^2$                                          & -- & [m\textsuperscript{2}] rotor disc area \\
+  $b$                                                    & -- & [m] ellipsoid polar radius \\
+  $b$                                                    & -- & [m] wing span \\
+  $B$                                                    & -- & [-] blade tip loss factor \\
+  $c$                                                    & -- & [m] mean aerodynamic chord \\
+  $c$                                                    & -- & [N/(m/s)] damping coefficient \\
+  $c_B$                                                  & -- & [m] rotor blade chord \\
+  $c_S$                                                  & -- & [m/s] speed of sound \\
+  $C_D$                                                  & -- & [-] drag coefficient \\
+  $C_l$                                                  & -- & [-] rolling moment coefficient \\
+  $C_L$                                                  & -- & [-] lift coefficient \\
+  $C_m$                                                  & -- & [-] pitching moment coefficient \\
+  $C_n$                                                  & -- & [-] yawing moment coefficient \\
+  $C_P$                                                  & -- & [-] power coefficient \\
+  $C_T$                                                  & -- & [-] thrust coefficient \\
+  $C_Y$                                                  & -- & [-] side force coefficient \\
+  $C_{\Delta P}$                                         & -- & [-] engine power losses coefficient \\
+  $D$                                                    & -- & [N] drag \\
+  $D$                                                    & -- & [m] propeller diameter \\
+  $e$                                                    & -- & [m] flapping hinge offset \\
+  $g$                                                    & -- & [m/s\textsuperscript{2}] gravitational acceleration \\
+  $h$                                                    & -- & [m] altitude \\
+  $\vec H=\left[ H_X, H_Y, H_Z \right]^T$                & -- & [kg$\cdot$m\textsuperscript{2}/s] angular momentum vector \\
+  $i$                                                    & -- & [rad] incidence angle \\
+  $I_B$                                                  & -- & [kg$\cdot$m\textsuperscript{2}] rotor blade moment of inertia \\
+  $\boldsymbol I$                                        & -- & [kg$\cdot$m\textsuperscript{2}] inertia matrix \\
+  $J$                                                    & -- & [-] propeller advance ratio \\
+  $k$                                                    & -- & [N/m] spring constant \\
+  $L$                                                    & -- & [N] lift \\
+  $L$                                                    & -- & [m] reference length scale \\
+  $m$                                                    & -- & [kg] mass \\
+  $\boldsymbol M$                                        & -- & [kg],[kg$\cdot$m],[kg$\cdot$m\textsuperscript{2}] generalized inertia matrix \\
+  $n$                                                    & -- & [rpm] engine revolutions per minute \\
+  $n$                                                    & -- & [rev./s] propeller revolution speed \\
+  $N_B$                                                  & -- & number of rotor blades \\
+  $p$                                                    & -- & [Pa] pressure \\
+  $P$                                                    & -- & [W] power \\
+  $\vec P=\left[ P_X, P_Y, P_Z \right]^T$                & -- & [kg$\cdot$m/s] momentum vector \\
+  $Q$                                                    & -- & [N$\cdot$m] torque \\
+  $\vec Q=\left[ L, M, N \right]^T$                      & -- & [N$\cdot$m] moment of force vector \\
+  $r$                                                    & -- & [m] coordinate along blade span \\
+  $\vec r=\left[ x, y, z \right]^T$                      & -- & [m] coordinates vector \\
+  $R$                                                    & -- & [N$\cdot$m/(kmol$\cdot$K)] universal gas constant \\
+  $R$                                                    & -- & [m] rotor radius \\
+  $\vec R=\left[ X, Y, Z \right]^T$                      & -- & [N] force vector \\
+  $Re$                                                   & -- & [-] Reynolds number \\
+  $s=\frac{N_B c_B}{\pi R}$                              & -- & [-] rotor solidity \\
+  $\boldsymbol s=\left[ u,v,w,p,q,r \right]^T$           & -- & [m/s],[rad/s] aircraft state vector \\
+  $S$                                                    & -- & [m\textsuperscript{2}] wing area \\
+  $S$                                                    & -- & [K] Sutherland constant \\
+  $S_B$                                                  & -- & [kg$\cdot$m] blade first moment of mass \\
+  $\vec S=\left[ S_X, S_Y, S_Z \right]^T$                & -- & [kg$\cdot$m] first moment of mass \\
+  $T$                                                    & -- & [K] temperature \\
+  $T$                                                    & -- & [N] thrust \\
+  $V$                                                    & -- & [m/s] velocity \\
+  $V_I$                                                  & -- & [m/s] induced velocity \\
+  $V_IH$                                                 & -- & [m/s] induced velocity for hovering \\
+  $\vec V=\left[ u, v, w \right]^T$                      & -- & [m/s] velocity vector \\
+  $\boldsymbol x=\left[ x,y,z,e_0,e_x,e_y,e_z \right]^T$ & -- & [m],[-] aircraft coordinates vector \\
+  $\alpha$                                               & -- & [rad] angle of attack \\
+  $\beta$                                                & -- & [rad] angle of sideslip \\
+  $\beta$                                                & -- & [rad] rotor blade flapping angle \\
+  $\beta_0$                                              & -- & [rad] rotor coning angle \\
+  $\beta_1c$, $\beta_1s$                                 & -- & [rad] longitudinal and lateral tip-path angles \\
+  $\gamma=\frac{\rho a c_B R^2}{I_B}$                    & -- & [-] blade Lock number \\
+  $\hat \delta$                                          & -- & [-] normalized controls position \\
+  $\varepsilon$                                          & -- & [rad] rotor shaft inclination angle \\
+  $\theta_0$                                             & -- & [rad] collective pitch angle \\
+  $\theta_1s$, $\theta_1c$                               & -- & [rad] longitudinal and lateral cyclic pitch angle \\
+  $\Theta$                                               & -- & [rad] pitch angle \\
+  $\lambda$                                              & -- & [rad] geographic longitude \\
+  $\lambda=\frac{w_{rw} - V_I}{\Omega_R R}$              & -- & [-] rotor inflow ratio \\
+  $\lambda_I=\frac{V_I}{\Omega_R R}$                     & -- & [-] induced inflow ratio \\
+  $\lambda_IH=\frac{V_IH}{\Omega_R R}$                   & -- & [-] induced inflow ratio for hovering \\
+  $\mu$                                                  & -- & [-] friction coefficient \\
+  $\mu$                                                  & -- & [Pa$\cdot$s] dynamic viscosity \\
+  $\mu=\frac{V}{\Omega_R R}$                             & -- & [-] rotor advance ratio \\
+  $\mu_C=\frac{V_C}{\Omega_R R}$                         & -- & [-] normalized climb velocity \\
+  $\mu_D=\frac{V_D}{\Omega_R R}$                         & -- & [-] normalized descent velocity \\
+  $\nu$                                                  & -- & [m\textsuperscript{2}/s] kinematic viscosity \\
+  $\rho$                                                 & -- & [kg/m\textsuperscript{3}] air density \\
+  $\varphi$                                              & -- & [rad] geographic latitude \\
+  $\Phi$                                                 & -- & [rad] roll angle \\
+  $\chi$                                                 & -- & [rad] rotor wake angle \\
+  $\Psi$                                                 & -- & [rad] yaw angle \\
+  $\Psi$                                                 & -- & [rad] rotor blade azimuth \\
+  $\vec \Omega=\left[ p, q, r \right]^T$                 & -- & [rad/s] angular velocity vector \\
+  $\Omega_R$                                             & -- & [rad/s] rotor revolution speed \\
+  $\frac{\epsilon}{\alpha}$                              & -- & [-] horizontal stabilizer downwash angle derivative with respect to the aircraft angle of attack \\
+\end{longtable}
+
+\noindent \textbf{Indices:}
+
+\begin{longtable}[l]{ l l l }
+  $AC$  & -- & aerodynamic center \\
+  $a$   & -- & Aerodynamic Axis System \\
+  $b$   & -- & Body Axis System \\
+  $ba$  & -- & Blade Axis System \\
+  $B$   & -- & rotor blade \\
+  $c$   & -- & Control Axis System \\
+  $cw$  & -- & Control-Wind Axis System \\
+  $C$   & -- & climb \\
+  $CM$  & -- & Center of Mass \\
+  $D$   & -- & descent \\
+  $g$   & -- & Gravity (North-East-Down) Axis System \\
+  $h$   & -- & horizontal stabilizer \\
+  $I$   & -- & induced \\
+  $IH$  & -- & induced in hovering \\
+  $MAP$ & -- & manifold absolute pressure \\
+  $N$   & -- & normal \\
+  $O$   & -- & coordinate system’s origin \\
+  $r$   & -- & Rotor Axis System \\
+  $rw$  & -- & Rotor-Wind Axis System \\
+  $R$   & -- & rotor \\
+  $RH$  & -- & rotor hub \\
+  $s$   & -- & Stability Axis System \\
+  $T$   & -- & tangent \\
+  $v$   & -- & vertical stabilizer \\
+  $X$   & -- & x-axis component \\
+  $Y$   & -- & y-axis component \\
+  $Z$   & -- & z-axis component \\
+\end{longtable}
+
+\noindent \textbf{Derivatives:}
+
+\begin{longtable}[l]{ l l l }
+  $\dot u=\frac{du}{dt}$             & -- & time derivative \\
+  $\bar \beta=\frac{d\beta}{d\Psi}$  & -- & azimuth derivative \\
+\end{longtable}

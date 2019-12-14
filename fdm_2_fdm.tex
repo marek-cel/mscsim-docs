@@ -1,0 +1,435 @@
+\chapter{Flight Dynamics Model}
+
+\section{Assumptions}
+
+Following assumptions are made:
+\begin{itemize}
+  \item[---] forces and moments acting on the aircraft are considered to be quasi-steady,
+  \item[---] aircraft is considered to be a rigid body,
+  \item[---] mass and moments of inertia depend only on variable masses (fuel, payload, etc.).
+\end{itemize}
+
+\section{Equations of Motion}
+
+\subsection{Dynamic Equations}
+
+Dynamic equations of motion are derived in Body Axis System for a rigid aircraft using conservation of momentum and angular momentum principles which are given by the following formulas. \cite{Taylor2005}, \cite{Osinski1997}, \cite{Leyko2002}
+
+\begin{align}
+  \label{eq-fdm-mom-deriv-1}
+  \frac{d {\vec P}_b}{dt}
+  &=
+  \sum_{j} {\vec R}_{j,b} \\
+  \label{eq-fdm-ang-mom-deriv-1}
+  \frac{d {\vec H}_{O,b}}{dt} + {\vec V}_{O,b} \times {\vec P}_b
+  &=
+  \sum_{j} {\vec Q}_{O,j,b}
+\end{align}
+
+Where:
+
+\begin{align}
+  \sum_{j} {\vec R}_{j,b}
+  &=
+  {\vec R}_{A,b} + {\vec R}_{M,b} + {\vec R}_{LG,b} + {\vec R}_{P,b} \\
+  \sum_{j} {\vec Q}_{O,j,b}
+  &=
+  {\vec Q}_{O,A,b} + {\vec Q}_{O,M,b} + {\vec Q}_{O,LG,b} + {\vec Q}_{O,P,b}
+\end{align}
+
+Momentum and angular momentum are: \cite{Osinski1997}, \cite{Leyko2002}
+
+\begin{align}
+  \label{eq-fdm-mom-1} 
+  {\vec P}_b
+  &=
+  m {\vec V}_{CM,b} \\
+  \label{eq-fdm-ang-mom-1}s
+  {\vec H}_{O,b}
+  &=
+  {\boldsymbol I}_{O,b} {\vec \Omega}_b
+  +
+  m \left( {\vec r}_{CM,b}
+  \times
+  {\vec V}_{O,b} \right)
+\end{align}
+
+Center of mass velocity is:
+
+\begin{equation}
+  \label{eq-fdm-vel-cm}
+  {\vec V}_{CM,b}
+  =
+  {\vec V}_{O,b} + {\vec \Omega}_b \times {\vec r}_{CM,b}
+\end{equation}
+
+Substituting equation (\ref{eq-fdm-vel-cm}) into equations (\ref{eq-fdm-mom-1}) and (\ref{eq-fdm-ang-mom-1}) gives:
+
+\begin{align}
+  \label{eq-fdm-mom-2} 
+  {\vec P}_b
+  &=
+  m {\vec V}_{O,b} + {\vec \Omega}_b
+  \times
+  {\vec S}_b \\
+  \label{eq-fdm-ang-mom-2}
+  {\vec H}_{O,b}
+  &=
+  {\boldsymbol I}_{O,b} {\vec \Omega}_b
+  +
+  {\vec S}_b \times {\vec V}_{O,b}
+\end{align}
+
+Where:
+
+\begin{equation}
+  {\vec S}_b = \left[ S_X, S_Y, S_Z \right]^T = m {\vec r}_{CM,b}
+\end{equation}
+
+Derivatives of momentum and angular momentum in rotating reference frame are: \cite{Taylor2005}, \cite{Osinski1997}, \cite{Leyko2002}
+
+\begin{align}
+  \label{eq-fdm-mom-deriv-2} 
+  \frac{d {\vec P}_b}{dt}
+  &=
+  \frac{\delta {\vec P}_b}{\delta t}
+  +
+  {\vec \Omega}_b \times {\vec P}_b \\
+  \label{eq-fdm-ang-mom-deriv-2}
+  \frac{d {\vec H}_{O,b}}{dt}
+  &=
+  \frac{\delta {\vec H}_{O,b}}{\delta t}
+  +
+  {\vec \Omega}_b \times {\vec H}_{O,b}
+\end{align}
+
+Substituting equations (\ref{eq-fdm-mom-deriv-2}) and (\ref{eq-fdm-ang-mom-deriv-2}) into (\ref{eq-fdm-mom-deriv-1}) and (\ref{eq-fdm-ang-mom-deriv-1}) gives:
+
+\begin{align}
+  \label{eq-fdm-mom-deriv-3}
+  \frac{\delta {\vec P}_b}{\delta t}
+  &=
+  \sum_{j} {\vec R}_{j,b}
+  -
+  {\vec \Omega}_b \times {\vec P}_b \\
+  \label{eq-fdm-ang-mom-deriv-3}
+  \frac{\delta {\vec H}_{O,b}}{\delta t}
+  &=
+  \sum_{j} {\vec Q}_{O,j,b}
+  -
+  {\vec V}_{O,b} \times {\vec P}_b
+  -
+  {\vec \Omega}_b \times {\vec H}_{O,b}
+\end{align}
+
+Differentiating equations (\ref{eq-fdm-mom-2}) and (\ref{eq-fdm-ang-mom-2}) gives:
+
+\begin{align}
+  \label{eq-fdm-mom-deriv-4}
+  \frac{\delta {\vec P}_b}{\delta t}
+  &=
+  m \frac{\delta {\vec V}_{O,b}}{\delta t}
+  +
+  \frac{\delta {\vec \Omega}_b}{\delta t}
+  \times
+  {\vec S}_b \\
+  \label{eq-fdm-ang-mom-deriv-4}
+  \frac{\delta {\vec H}_{O,b}}{\delta t}
+  &=
+  {\boldsymbol I}_b \frac{\delta {\vec \Omega}_b}{\delta t}
+  +
+  {\vec S}_b
+  \times
+  \frac{\delta {\vec V}_{O,b}}{\delta t}
+\end{align}
+
+Substituting equations (\ref{eq-fdm-mom-deriv-4}) and (\ref{eq-fdm-ang-mom-deriv-4}) into (\ref{eq-fdm-mom-deriv-3}) and (\ref{eq-fdm-ang-mom-deriv-3}) gives:
+
+\begin{align}
+  \label{eq-fdm-mom-3}
+  m \frac{\delta {\vec V}_{O,b}}{\delta t}
+  +
+  \frac{\delta {\vec \Omega}_b}{\delta t} \times {\vec S}_b
+  &=
+  \sum_{j} {\vec R}_{j,b}
+  -
+  {\vec \Omega}_b \times {\vec P}_b \\
+  \label{eq-fdm-ang-mom-3}
+  {\boldsymbol I}_b \frac{\delta {\vec \Omega}_b}{\delta t}
+  +
+  {\vec S}_b \times \frac{\delta {\vec V}_{O,b}}{\delta t}
+  &=
+  \sum_{j} {\vec Q}_{O,j,b}
+  -
+  {\vec V}_{O,b} \times {\vec P}_b
+  -
+  {\vec \Omega}_b \times {\vec H}_{O,b}
+\end{align}
+
+Representing vector cross product as matrix-vector multiplication equations (\ref{eq-fdm-mom-3}) and (\ref{eq-fdm-ang-mom-3}) can be written as:
+
+\begin{equation}
+  \label{eq-fdm-mom-4}
+  \left[
+    \begin{matrix}
+      m & 0 & 0 \\
+      0 & m & 0 \\
+      0 & 0 & m \\
+    \end{matrix}
+  \right]
+  \left[
+    \begin{matrix}
+      \dot u \\
+      \dot v \\
+      \dot w \\
+    \end{matrix}
+  \right]
+  +
+  \left[
+    \begin{matrix}
+         0 &  S_Z & -S_Y \\
+      -S_Z &    0 &  S_X \\
+       S_Y & -S_X &    0 \\
+    \end{matrix}
+  \right]
+  \left[
+    \begin{matrix}
+      \dot p \\
+      \dot q \\
+      \dot r \\
+    \end{matrix}
+  \right]
+  =
+  \sum_{j} {\vec R}_{j,b} - {\vec \Omega}_b \times {\vec P}_b
+\end{equation}
+
+\begin{equation}
+  \label{eq-fdm-ang-mom-4}
+  \left[
+    \begin{matrix}
+       I_X    & -I_{XY} & -I_{XZ} \\
+      -I_{XY} &  I_Y    & -I_{YZ} \\
+      -I_{XZ} & -I_{YZ} &  I_Z    \\
+    \end{matrix}
+  \right]
+  \left[
+    \begin{matrix}
+      \dot p \\
+      \dot q \\
+      \dot r \\
+    \end{matrix}
+  \right]
+  +
+  \left[
+    \begin{matrix}
+         0 & -S_Z &  S_Y \\
+       S_Z &    0 & -S_X \\
+      -S_Y & -S_X &    0 \\
+    \end{matrix}
+  \right]
+  \left[
+    \begin{matrix}
+      \dot u \\
+      \dot v \\
+      \dot w \\
+    \end{matrix}
+  \right]
+  =
+  \sum_j {\vec Q}_{O,j,b}
+  -
+  {\vec V}_{O,b} \times {\vec P}_b
+  -
+  {\vec \Omega}_b \times {\vec H}_{O,b}
+\end{equation}
+
+Combined equations (\ref{eq-fdm-mom-4}) and (\ref{eq-fdm-ang-mom-4}) can be written as follows. \cite{Sibilski2004}
+
+\begin{equation}
+  \label{eq-fdm-motion-1}
+  \boldsymbol M \dot {\boldsymbol s} = \boldsymbol R
+\end{equation}
+
+Where:
+
+\begin{equation}
+  \dot {\boldsymbol s}
+  =
+  \left[ \dot u, \dot v, \dot w, \dot p, \dot q, \dot r \right]^T
+\end{equation}
+
+\begin{equation}
+  {\boldsymbol R}
+  =
+  \left[
+    \begin{array}{c}
+      \sum_j {\vec R}_{j,b} - {\vec \Omega}_b \times {\vec P}_b \\
+      \sum_j {\vec W}_{O,j,b} - {\vec V}_{O,b} \times {\vec P}_b - {\vec \Omega}_b \times {\vec H}_{O,b}
+    \end{array}
+  \right]
+\end{equation}
+
+\begin{equation}
+ \boldsymbol M
+ =
+  \left[
+    \begin{matrix}
+         m &    0 &    0 &    0    &     S_Z &    -S_Y \\
+         0 &    m &    0 & -S_Z    &       0 &     S_X \\
+         0 &    0 &    m &  S_Y    &    -S_X &       0 \\
+         0 & -S_Z &  S_Y &  I_X    & -I_{XY} & -I_{XZ} \\
+       S_Z &    0 & -S_X & -I_{XY} &  I_Y    & -I_{YZ} \\
+      -S_Y &  S_X &    0 & -I_{XZ} & -I_{YZ} &  I_Z
+    \end{matrix}
+  \right]
+\end{equation}
+
+For the purpose of numerical simulation equation (\ref{eq-fdm-motion-1}) can be written in the following form, which is easy to solve with Gaussian methods.
+
+\begin{equation}
+  \label{eq-fdm-motion-2}
+  \dot {\boldsymbol s} = {\boldsymbol M}^{-1} \boldsymbol R
+\end{equation}
+
+\subsection{Kinematic Equations}
+
+\subsubsection{Time Derivatives}
+
+Position vector derivative is given as follows. \cite{Allerton2009}
+
+\begin{gather}
+  %\resizebox{0.8\hsize}{!}{$
+  \label{eq-fdm-position-deriv}
+  \left[
+    \begin{matrix}
+      \dot x \\
+      \dot y \\
+      \dot z
+    \end{matrix}
+  \right]
+  =
+    \left[
+    \begin{matrix}
+      cos\Theta cos\Psi &
+      cos\Psi sin\Phi sin\Theta - cos\Phi sin\Psi &
+      sin\Phi sin\Psi + cos\Phi cos\Psi sin\Theta \\
+      cos\Theta sin\Psi &
+      cos\Phi cos\Psi + sin\Phi sin\Theta sin\Psi &
+      cos\Phi sin\Theta sin\Psi - cos\Psi sin\Phi \\
+      -sin\Theta &
+      cos\Theta sin\Phi &
+      cos\Phi cos\Theta
+    \end{matrix}
+  \right]
+  \left[
+    \begin{matrix}
+      u \\
+      v \\
+      w
+    \end{matrix}
+  \right]
+  %$}
+\end{gather}
+
+Tait-Bryan angles derivatives are given as follows. \cite{Sibilski2004}, \cite{Allerton2009}
+
+\begin{equation}
+  \label{eq-fdm-attitude-deriv}
+  \left[
+    \begin{matrix}
+      \dot \Phi \\
+      \dot \Theta \\
+      \dot \Psi
+    \end{matrix}
+  \right]
+  =
+  \left[
+    \begin{matrix}
+      1 & sin\Phi tan\Theta & cos\Phi tan\Theta \\
+      0 & cos\Phi & -sin\Phi \\
+      0 & sin\Phi sec\Theta & cos\Phi sec\Theta
+    \end{matrix}
+  \right]
+  \left[
+    \begin{matrix}
+      p \\
+      q \\
+      r
+    \end{matrix}
+  \right]
+\end{equation}
+
+There are singularities in equation (\ref{eq-fdm-attitude-deriv}) for value of $\Theta$ = $\pm$90\degree . One method of solving this problem is to use quaternions instead of Tait-Bryan angles to describe aircraft attitude.
+
+\subsubsection{Quaternions}
+
+Quaternion time derivative is given as follows. \cite{Sibilski2004}, \cite{StevensLewis1992}
+
+\begin{equation}
+  \label{eq-fdm-quaternion-deriv}
+  \left[
+    \begin{matrix}
+      \dot e_0 \\
+      \dot e_X \\
+      \dot e_Y \\
+      \dot e_Z
+    \end{matrix}
+  \right]
+  =
+  \left[
+    \begin{matrix}
+       1 &  p &  q &  r \\
+      -p &  0 & -r &  q \\
+      -q &  r &  0 & -p \\
+      -r & -q &  p &  0
+    \end{matrix}
+  \right]
+  \left[
+    \begin{matrix}
+      e_0 \\
+      e_X \\
+      e_Y \\
+      e_Z
+    \end{matrix}
+  \right]
+\end{equation}
+
+\section{Numerical Integration}
+
+State vector $\boldsymbol s$ can be calculated by solving initial value problem given by the following expression.
+
+\begin{equation}
+  \label{eq-fdm-int-state}
+  {\boldsymbol s} \left( t_0 + \Delta t \right)
+  =
+  {\boldsymbol s} \left( t_0 \right)
+  +
+  \int_{t_0}^{t_0 + \Delta t} \dot {\boldsymbol s} dt
+\end{equation}
+
+
+State vector derivative $\dot {\boldsymbol s}$ can be calculated using formula (\ref{eq-fdm-motion-2}).
+
+Aircraft position and attitude can be calculated by solving initial value problem given as follows.
+
+\begin{equation}
+  \label{eq-fdm-int-position}
+  {\boldsymbol x} \left( t_0 + \Delta t \right)
+  =
+  {\boldsymbol x} \left( t_0 \right)
+  +
+  \int_{t_0}^{t_0 + \Delta t} \dot {\boldsymbol x} dt
+\end{equation}
+
+Where:
+
+\begin{equation}
+  {\boldsymbol x}
+  =
+  \left[
+    x, y, z, e_0, e_X, e_Y, e_Z
+  \right]^T
+\end{equation}
+
+Coordinates vector derivative $\dot {\boldsymbol x}$ can be calculated using formulas (\ref{eq-fdm-position-deriv}) and (\ref{eq-fdm-quaternion-deriv}).
+
+Initial value problems, given by the (\ref{eq-fdm-int-state}) and (\ref{eq-fdm-int-position}) expressions, can be solved using Runge-Kutta 4th-order method which is given as follows. \cite{Press2007}, \cite{Krupowicz1986}, \cite{BaronPiatek2004}
