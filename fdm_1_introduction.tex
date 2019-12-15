@@ -50,7 +50,7 @@ Considering all this, Gravity Earth Axis System is a coordinate system, with the
 
 \subsection{Earth-fixed Axis System}
 
-For any further considerations World Geodetic System 1984 as described in \cite{NIMA_WGS84} is used as the Earth-fixed Axis System.
+For any further considerations World Geodetic System 1984 as described in \cite{NIMA-TR-8350-2} is used as the Earth-fixed Axis System.
 
 \begin{figure}
   \centering
@@ -75,49 +75,51 @@ Aircraft attitude is defined either by a quaternion or by quasi-Euler Tait-Bryan
 ransformation to the coordinate system rotated by Tait-Bryan $\Psi$-$\Theta$-$\Phi$ angles can be performed using rotation matrix, which is given by the following relations. \cite{Padfield2007}, \cite{Sibilski2004}
 
 \begin{align}
-  T \left( \Phi \right) &=
+  \boldsymbol T \left( \Phi \right) &=
   \left[
     \begin{matrix}
-      1 &        0 &       0 \\
-      0 &  cos\Phi & sin\Phi \\
-      0 & -sin\Phi & cos\Phi \\
+      1 &          0 &         0 \\
+      0 &  \cos \Phi & \sin \Phi \\
+      0 & -\sin \Phi & \cos \Phi \\
     \end{matrix}
   \right]
   \\
-  T \left( \Theta \right) &=
+  \boldsymbol T \left( \Theta \right) &=
   \left[
     \begin{matrix}
-      cos\Theta & 0 & -sin\Theta \\
-              0 & 1 &          0 \\
-      sin\Theta & 0 &  cos\Theta \\
+      \cos \Theta & 0 & -\sin \Theta \\
+                0 & 1 &            0 \\
+      \sin \Theta & 0 &  \cos \Theta \\
     \end{matrix}
   \right]
   \\
-  T \left( \Psi \right) &=
+  \boldsymbol T \left( \Psi \right) &=
   \left[
     \begin{matrix}
-       cos\Psi & sin\Psi & 0 \\
-      -sin\Psi & cos\Psi & 0 \\
-             0 &       0 & 1 \\
+       \cos\Psi & \sin\Psi & 0 \\
+      -\sin\Psi & \cos\Psi & 0 \\
+              0 &        0 & 1 \\
     \end{matrix}
   \right]
 \end{align}
 
 \begin{equation}
   \begin{array}{c}
-  T \left( \Phi,\Theta,\Psi \right) =
-  T \left( \Phi \right) T \left( \Theta \right)  T \left( \Psi \right) = \\
+  \boldsymbol T \left( \Phi,\Theta,\Psi \right) =
+  \boldsymbol T \left( \Phi \right)
+  \boldsymbol T \left( \Theta \right) 
+  \boldsymbol T \left( \Psi \right) = \\
   \left[
     \begin{matrix}
-      cos \Theta cos \Psi &
-      cos\Theta sin\Psi &
-      -sin\Theta \\
-      cos \Psi sin \Phi sin \Theta - cos \Phi sin\Psi &
-      cos\Phi cos\Psi + sin \Phi sin \Theta sin\Psi &
-      cos\Theta sin\Phi \\
-      sin \Phi sin \Psi + cos \Phi cos \Psi sin\Theta &
-      cos\Phi sin\Theta sin\Psi - cos\Psi sin\Phi &
-      cos\Phi cos\Theta \\
+       \cos \Theta \cos \Psi &
+       \cos \Theta \sin \Psi &
+      -\sin \Theta \\
+       \cos \Psi   \sin \Phi   \sin \Theta - \cos \Phi   \sin \Psi &
+       \cos \Phi   \cos \Psi + \sin \Phi     \sin \Theta \sin \Psi &
+       \cos \Theta \sin \Phi \\
+       \sin \Phi   \sin \Psi + \cos \Phi     \cos \Psi   \sin \Theta &
+       \cos \Phi   \sin \Theta \sin \Psi   - \cos \Psi   \sin \Phi &
+       \cos \Phi   \cos \Theta \\
     \end{matrix}
   \right]
   \end{array}
@@ -131,13 +133,13 @@ Procedure of conversion from geographic coordinates to the Cartesian coordinates
 
 \begin{align}
   e    &= \frac{1}{a} \sqrt{a^2-b^2} \\
-  \chi &= \sqrt{ 1 - e^2 sin^2 \varphi }
+  \chi &= \sqrt{ 1 - e^2 \sin^2 \varphi }
 \end{align}
 
 \begin{align}
-  x_i &= \left( \frac{a}{\chi} + h \right) cos\varphi cos\lambda \\
-  y_i &= \left( \frac{a}{\chi} + h \right) cos\varphi sin\lambda \\
-  z_i &= \left( a \frac{1-e^2}{\chi} + h \right) sin\varphi
+  x_i &= \left( \frac{a}{\chi} + h \right) \cos \varphi \cos \lambda \\
+  y_i &= \left( \frac{a}{\chi} + h \right) \cos \varphi \sin \lambda \\
+  z_i &= \left( a \frac{1-e^2}{\chi} + h \right) \sin \varphi
 \end{align}
 
 \subsubsection{Conversion from Cartesian to Geographic Coordinates}
@@ -173,6 +175,6 @@ Geographic coordinates are given as.
 
 \begin{align}
   h    &= U \left( 1 - \frac{b^2}{aV} \right) \\
-  \varphi &= atan \left( \frac{z_i + e'^2 Z_0}{r} \right) \\
-  \lambda &= atan \left( \frac{y_i}{z_i} \right)
+  \varphi &= \arctan \left( \frac{z_i + e'^2 Z_0}{r} \right) \\
+  \lambda &= \arctan \left( \frac{y_i}{z_i} \right)
 \end{align}

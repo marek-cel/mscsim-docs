@@ -1,0 +1,109 @@
+\chapter{Environment}
+
+\section{Atmosphere}
+
+US Standard Atmosphere 1976 is used to calculate air temperature, pressure, density, viscosity and speed of sound depending on altitude.
+
+Mean molecular weight is given as follows:
+
+\begin{equation}
+  M_0 = \frac{ \sum_{j} M_j F_j }{ \sum_{j} F_j } = 28.9645
+\end{equation}
+
+Temperature is given by the following formula: \cite{NASA-TM-X-74335}
+
+\begin{equation}
+  T \left( h \right)
+  =
+  T_j + \left( \frac{dT}{dh} \right)_j \left( h - h_j \right)
+\end{equation}
+
+Pressure is given as follows: \cite{NASA-TM-X-74335}
+
+\begin{align}
+  p \left( h \right)
+  =
+  p_j \left( \frac{T_j}{ T \left( h \right) } \right)
+  ^
+  { \frac{gM_0}{ R \left( \frac{dT}{dh} \right)_j } }
+  &\mathrm{~for~} \left( \frac{dT}{dh} \right)_j \neq 0 \\
+    p \left( h \right)
+  =
+  p_j e^{ \frac{ g M_0 \left( h - h_j \right) }{RT_j} }
+  &\mathrm{~for~} \left( \frac{dT}{dh} \right)_j = 0
+\end{align}
+
+Density is expressed by the following formula: \cite{NASA-TM-X-74335}
+
+\begin{equation}
+  \rho \left( h \right)
+  =
+  \frac{ p \left( h \right) M_0 }{ RT \left( h \right) }
+\end{equation}
+
+Speed of sound is given as follows: \cite{NASA-TM-X-74335}
+
+\begin{equation}
+  c_S \left( h \right)
+  =
+  \sqrt{ \frac{ \gamma RT \left( h \right) }{ M_0 } }
+\end{equation}
+
+Dynamic viscosity is given by the formula: \cite{NASA-TM-X-74335}
+
+\begin{equation}
+  \mu \left( h \right)
+  =
+  \frac{ 1.458 \cdot 10^{-6} \sqrt{ \left[ T \left( h \right) \right]^3 } }
+  { T \left( h \right) + S }
+\end{equation}
+
+Kinetic viscosity is given as follows: \cite{NASA-TM-X-74335}
+
+\begin{equation}
+  \nu \left( h \right)
+  =
+  \frac{ \mu \left( h \right) }{ \rho \left( h \right) }
+\end{equation}
+
+\begin{table}
+  \begin{center}
+    \begin{tabular}{ S | S | S | S }
+      \toprule
+      \textbf{Altitude} & \textbf{Temperature gradient} & \textbf{Temperature} & \textbf{Pressure} \\
+      {$h_j$} & {$\left( \frac{dT}{dh} \right)_j$} & {$T_j$} & {$p_j$} \\
+      {[m]} & {[K/m]} & {[K]} & {[Pa]} \\ \midrule
+          0 & -6.5e-3 & 288.15 & 101325.0    \\
+      11000 &  0.0    & 216.65 &  22632.0    \\
+      20000 &  1.0e-3 & 216.65 &   5474.8    \\
+      32000 &  2.8e-3 & 228.65 &    868.01   \\
+      47000 &  0.0    & 270.65 &    110.9    \\
+      51000 & -2.8e-3 & 270.65 &     66.938  \\
+      71000 & -2.0e-3 & 214.65 &      3.9564 \\
+      \bottomrule
+    \end{tabular}
+    \caption{Reference levels \cite{NASA-TM-X-74335} }
+  \end{center}
+\end{table}
+
+\begin{table}
+  \begin{center}
+    \begin{tabular}{ l | S | S }
+      \toprule
+      \textbf{Gas species} & \textbf{Molecular weight} & \textbf{Fractional volume} \\
+      {} & {[kg/kmol]} & {[-]} \\ \midrule
+      Nitrogen       & 28.0134  & 0.78084     \\
+      Oxygen         & 31.9988  & 0.209476    \\
+      Argon          & 39.948   & 0.00934     \\
+      Carbon Dioxide & 44.00995 & 0.000314    \\
+      Neon           & 20.183   & 0.00001818  \\
+      Helium         & 4.0026   & 0.00000524  \\
+      Krypton        & 83.8     & 0.00000114  \\
+      Xenon          & 131.3    & 0.000000087 \\
+      Methane        & 16.04303 & 0.000002    \\
+      Hydrogen       & 2.01594  & 0.0000005   \\
+      \bottomrule
+    \end{tabular}
+    \caption{Molecular weights and fractional volume composition of S/L dry air \cite{NASA-TM-X-74335} }
+  \end{center}
+\end{table}

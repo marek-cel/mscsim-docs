@@ -1,20 +1,25 @@
 \documentclass[12pt,a4paper]{report}
 \special{papersize=210mm,297mm}
 
-\usepackage{amsmath}
-\usepackage{blindtext}
-\usepackage{enumitem}
-\usepackage{gensymb}
-\usepackage{geometry}
-\usepackage{graphicx}
-\usepackage{hyperref}
-\usepackage[utf8]{inputenc}
-\usepackage[english]{isodate}
-\usepackage{longtable}
+\usepackage{amsmath}			%
+\usepackage{blindtext}			%
+\usepackage{booktabs}           % For prettier tables
+\usepackage{enumitem}			%
+\usepackage{gensymb}			%
+\usepackage{geometry}			%
+\usepackage{graphicx}			%
+\usepackage{hyperref}			%
+\usepackage[utf8]{inputenc}		%
+\usepackage[english]{isodate}	%
+\usepackage{longtable}			%
+\usepackage{setspace}			%
+\usepackage{siunitx}			% Required for alignment
 
 \frenchspacing
 
-\linespread{1.3}
+%\linespread{1.3}
+%\onehalfspacing
+\setstretch{1.3}
 
 \setlength{\parindent}{1em}
 \setlength{\parskip}{1em}
@@ -40,7 +45,7 @@
   \noindent Copyright \copyright{} \the\year{} Marek M. Cel. All rights reserved.
 
   \noindent Author: Marek M. Cel \\
-  Revision: 8 \\
+  Revision: 10 \\
   Date: \today
 
   \input{license_cc0}
@@ -55,6 +60,8 @@
   \include{fdm_0_notation}
   \include{fdm_1_introduction}
   \include{fdm_2_fdm}
+  \include{fdm_3_environment}
+  \include{fdm_4_aerodynamics}
   
   \clearpage
   \bibliography{bibliography} 

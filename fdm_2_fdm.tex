@@ -44,7 +44,7 @@ Momentum and angular momentum are: \cite{Osinski1997}, \cite{Leyko2002}
   {\vec P}_b
   &=
   m {\vec V}_{CM,b} \\
-  \label{eq-fdm-ang-mom-1}s
+  \label{eq-fdm-ang-mom-1}
   {\vec H}_{O,b}
   &=
   {\boldsymbol I}_{O,b} {\vec \Omega}_b
@@ -75,7 +75,7 @@ Substituting equation (\ref{eq-fdm-vel-cm}) into equations (\ref{eq-fdm-mom-1}) 
   \label{eq-fdm-ang-mom-2}
   {\vec H}_{O,b}
   &=
-  {\boldsymbol I}_{O,b} {\vec \Omega}_b
+  {\boldsymbol I}_b {\vec \Omega}_b
   +
   {\vec S}_b \times {\vec V}_{O,b}
 \end{align}
@@ -224,7 +224,7 @@ Representing vector cross product as matrix-vector multiplication equations (\re
     \begin{matrix}
          0 & -S_Z &  S_Y \\
        S_Z &    0 & -S_X \\
-      -S_Y & -S_X &    0 \\
+      -S_Y &  S_X &    0 \\
     \end{matrix}
   \right]
   \left[
@@ -262,8 +262,8 @@ Where:
   =
   \left[
     \begin{array}{c}
-      \sum_j {\vec R}_{j,b} - {\vec \Omega}_b \times {\vec P}_b \\
-      \sum_j {\vec W}_{O,j,b} - {\vec V}_{O,b} \times {\vec P}_b - {\vec \Omega}_b \times {\vec H}_{O,b}
+      \sum_{j} {\vec R}_{j,b} - {\vec \Omega}_b \times {\vec P}_b \\
+      \sum_{j} {\vec Q}_{O,j,b} - {\vec V}_{O,b} \times {\vec P}_b - {\vec \Omega}_b \times {\vec H}_{O,b}
     \end{array}
   \right]
 \end{equation}
@@ -309,15 +309,15 @@ Position vector derivative is given as follows. \cite{Allerton2009}
   =
     \left[
     \begin{matrix}
-      cos\Theta cos\Psi &
-      cos\Psi sin\Phi sin\Theta - cos\Phi sin\Psi &
-      sin\Phi sin\Psi + cos\Phi cos\Psi sin\Theta \\
-      cos\Theta sin\Psi &
-      cos\Phi cos\Psi + sin\Phi sin\Theta sin\Psi &
-      cos\Phi sin\Theta sin\Psi - cos\Psi sin\Phi \\
-      -sin\Theta &
-      cos\Theta sin\Phi &
-      cos\Phi cos\Theta
+       \cos \Theta \cos \Psi &
+       \cos \Psi   \sin \Phi   \sin \Theta - \cos \Phi   \sin \Psi &
+       \sin \Phi   \sin \Psi + \cos \Phi     \cos \Psi   \sin \Theta \\
+       \cos \Theta \sin \Psi &
+       \cos \Phi   \cos \Psi + \sin \Phi     \sin \Theta \sin \Psi &
+       \cos \Phi   \sin \Theta \sin \Psi -   \cos \Psi   \sin \Phi \\
+      -\sin \Theta &
+       \cos \Theta \sin \Phi &
+       \cos \Phi   \cos \Theta
     \end{matrix}
   \right]
   \left[
@@ -344,9 +344,9 @@ Tait-Bryan angles derivatives are given as follows. \cite{Sibilski2004}, \cite{A
   =
   \left[
     \begin{matrix}
-      1 & sin\Phi tan\Theta & cos\Phi tan\Theta \\
-      0 & cos\Phi & -sin\Phi \\
-      0 & sin\Phi sec\Theta & cos\Phi sec\Theta
+      1 & \sin \Phi \tan \Theta & \cos \Phi \tan \Theta \\
+      0 & \cos \Phi & -\sin \Phi \\
+      0 & \sin \Phi \sec \Theta & \cos \Phi \sec \Theta
     \end{matrix}
   \right]
   \left[
@@ -433,3 +433,24 @@ Where:
 Coordinates vector derivative $\dot {\boldsymbol x}$ can be calculated using formulas (\ref{eq-fdm-position-deriv}) and (\ref{eq-fdm-quaternion-deriv}).
 
 Initial value problems, given by the (\ref{eq-fdm-int-state}) and (\ref{eq-fdm-int-position}) expressions, can be solved using Runge-Kutta 4th-order method which is given as follows. \cite{Press2007}, \cite{Krupowicz1986}, \cite{BaronPiatek2004}
+
+\begin{equation}
+  y \left( t_0 + \Delta t \right)
+  \approx
+  y \left( t_0 \right)
+  +
+  \frac{1}{6} \Delta t \left( k_1 + 2 k_2 + 2 k_3 + k_4 \right)
+\end{equation}
+
+Where:
+
+\begin{align}
+  k_1 &=
+  f \left( t_n, y_n \right) \\
+  k_2 &=
+  f \left( t_n + \frac{1}{2} \Delta t, y_n + \frac{1}{2} \Delta t k_1 \right) \\
+  k_3 &= 
+  f \left( t_n + \frac{1}{2} \Delta t, y_n + \frac{1}{2} \Delta t k_2 \right) \\
+  k_4 &= 
+  f \left( t_n + \Delta t, y_n + \Delta t k_3 \right) \\
+\end{align}
