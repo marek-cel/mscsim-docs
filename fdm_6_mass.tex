@@ -1,0 +1,41 @@
+\chapter{Mass and Inertia}
+
+\section{Empty Aircraft Moments of Inertia}
+
+Aircraft is divided into structure groups which mass is estimated. This groups are assumed to be homogeneous rigid body with simple shape which allows to calculate its moment of inertia using an exact closed-form expression, given e.g. in \cite{HousnerHudson1980}.
+
+Steiner’s theorem, given by the following expression, is used to express aircraft structure groups inertia tensor in Body Axis System. \cite{Taylor2005}, \cite{ResnickHalliday2011}
+\begin{equation}
+  \label{eq-mass-steiners}
+  {\boldsymbol I}_b
+  =
+  {\boldsymbol I}_0
+  +
+  m
+  \left[
+    \begin{matrix}
+      y^2 + z^2 &       -xy &       -xz \\
+            -yx & x^2 + z^2 &       -yz \\
+            -zx &       -zy & x^2 + y^2 \\
+    \end{matrix}
+  \right]
+\end{equation}
+
+Sum of all aircraft structure groups inertia tensors gives empty aircraft inertia tensor:
+\begin{equation}
+  {\boldsymbol I}_b = \sum_{j} {\boldsymbol I}_{j,b}
+\end{equation}
+
+\section{Variable Masses}
+
+All variable masses, crew, fuel, payload, etc., are considered to be point masses. Point mass inertia tensor can be calculated using formula (\ref{eq-mass-steiners}), where ${\boldsymbol I}_b = 0$. This tensors are then added to the empty aircraft inertia tensor giving total aircraft inertia tensor.
+
+Aircraft total first moment of mass is given as follows:
+\begin{equation}
+  {\vec S}_b = \sum_{j} m_j {\vec r}_{CM,j,b}
+\end{equation}
+
+Position of aircraft center of mass including variable masses is then given by following formula:
+\begin{equation}
+  {\vec r}_{CM,b} = \frac{ {\vec S}_b }{ \sum_{j} m_j }
+\end{equation}

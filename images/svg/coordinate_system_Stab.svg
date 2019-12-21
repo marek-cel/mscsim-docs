@@ -9,14 +9,14 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="340pt"
-   height="175pt"
-   viewBox="0 0 119.94445 61.736111"
+   width="12cm"
+   height="6.5cm"
+   viewBox="0 0 120 65"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:docname="coordinate_system_Stab.svg"
-   inkscape:export-filename="/home/cel/dev/git/mscsim-docs/trunk/images/png/coordinate_system_Stab.png"
+   inkscape:export-filename="/media/cel/USB128GB/Dropbox/MScSim/docs_tex/images/png/coordinate_system_Stab.png"
    inkscape:export-xdpi="300"
    inkscape:export-ydpi="300">
   <defs
@@ -213,12 +213,12 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="20.514407"
-     inkscape:cy="21.119896"
+     inkscape:cx="243.9603"
+     inkscape:cy="22.727066"
      inkscape:document-units="cm"
      inkscape:current-layer="layer1"
      showgrid="false"
-     units="pt"
+     units="cm"
      borderlayer="true"
      inkscape:window-width="1920"
      inkscape:window-height="1012"
@@ -237,7 +237,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -245,17 +245,17 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-235.26391)">
+     transform="translate(0,-232.00002)">
     <rect
-       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:3.17500002, 3.17500002;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:3.17500006, 3.17500006;stroke-dashoffset:0;stroke-opacity:1"
        id="rect1818"
-       width="119.94445"
-       height="61.736115"
-       x="-1.651291e-06"
-       y="235.26392" />
+       width="120"
+       height="65"
+       x="6.3805356e-07"
+       y="232.00002" />
     <g
        id="g1064"
-       transform="translate(-0.02777717,4.1319445)">
+       transform="translate(0,2.4999981)">
       <g
          style="stroke-width:2.14822006"
          transform="matrix(0.46588769,0,0,0.46511597,31.558901,133.59507)"

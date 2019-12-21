@@ -1,4 +1,5 @@
 TEX_FILES=\
+	data.tex \
 	fdm.tex
 
 BIBLIOGRAPHY=bibliography.bib
@@ -8,26 +9,27 @@ BIBLIOGRAPHY=bibliography.bib
 .SUFFIXES: .tex .aux
 .SUFFIXES: .tex .bbl
 .SUFFIXES: .tex .pdf
+.SUFFIXES: .tex .temp
 
 all: $(TEX_FILES:.tex=.aux) $(TEX_FILES:.tex=.bbl) $(TEX_FILES:.tex=.pdf)
 
 .tex.aux: $(TEX_FILES)
-	@echo -e 'Compiling file: $*.aux'
+	@echo "\e[1;32m"'Compiling file: $*.aux'"\e[0m"
 	@latex $*.tex
 
 .tex.bbl: $(TEX_FILES)
-	@echo -e 'Compiling file: $*.bbl'
-	cp ${BIBLIOGRAPHY} $*.bib
+	@echo "\e[1;32m"'Compiling file: $*.bbl'"\e[0m"
+	@cp ${BIBLIOGRAPHY} $*.bib
 	@bibtex $*
 
 # .tex.pdf: $(TEX_FILES)
-# 	@echo -e 'Compiling file: $*.pdf'
+# 	@echo "\e[1;32m"'Compiling file: $*.pdf'"\e[0m"
 # 	@latex $*.tex
 # 	@latex $*.tex
 # 	@dvipdf $*.dvi
 
 .tex.pdf: $(TEX_FILES)
-	@echo -e 'Compiling file: $*.pdf'
+	@echo "\e[1;32m"'Compiling file: $*.pdf'"\e[0m"
 	@latex $*.tex
 	@pdflatex $*.tex
 
@@ -42,6 +44,14 @@ clean:
 	@rm -f *.run.xml
 	@rm -f *.toc
 
-cleanall: clean
+cleanall: clean $(TEX_FILES:.tex=.temp)
+	@rm -f *.bak
 	@rm -f *.dvi
 	@rm -f *.pdf
+	@rm -f *.temp
+	@rm -f images/*.pdf
+
+.tex.temp: $(TEX_FILES)
+	@echo "\e[1;33m"'Removing file: $*.bib'"\e[0m"
+	@touch $*.temp
+	@rm -f $*.bib

@@ -1,0 +1,40 @@
+\chapter{Geometric Parameters}
+
+\section{Wing Basic Geometric Parameters}
+
+Aspect ratio is given by the following formula: \cite{Raymer1992}
+\begin{equation}
+  A = \frac{b^2}{S}
+\end{equation}
+
+Taper ratio is given by the following formula. \cite{Raymer1992}
+\begin{equation}
+  \lambda = \frac{c_{tip}}{c_{root}}
+\end{equation}
+
+\section{Mean Aerodynamic Chord}
+
+For tapper wing mean aerodynamic chord can be calculated using following formula: \cite{Galinski2016}
+\begin{equation}
+  c_{MAC} = \frac{2}{3} c_{root} \frac{1+\lambda+\lambda^2}{1+\lambda}
+\end{equation}
+
+For more complex shapes mean aerodynamic chord is given as follows: [] % TODO: citation
+\begin{equation}
+  c_{MAC} = 
+  \left(
+    \int_{-\frac{b}{2}}^{\frac{b}{2}} \left( c \left( y \right) \right)^2 dy
+  \right)
+  \div
+  \left(
+    \int_{-\frac{b}{2}}^{\frac{b}{2}} \left( c \left( y \right) \right) dy
+  \right)
+\end{equation}
+
+\section{Wing Aerodynamic Center}
+
+Position of wing aerodynamic center ${\vec r}_{AC}$ is at 25\% of the mean aerodynamic chord and its lateral coordinate is given by the following formula. \cite{Raymer1992}, \cite{Galinski2016}, \cite{Torenbeek1982}
+\begin{equation}
+  y_{AC} =
+  \frac{ b \left( 1 + 2 \lambda \right) }{ 6 \left( 1 + \lambda \right) }
+\end{equation}

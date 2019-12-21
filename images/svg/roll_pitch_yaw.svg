@@ -9,14 +9,14 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="320pt"
-   height="205pt"
-   viewBox="0 0 112.88889 72.319446"
+   width="12cm"
+   height="7.5cm"
+   viewBox="0 0 120 75"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:docname="roll_pitch_yaw.svg"
-   inkscape:export-filename="/home/cel/dev/git/mscsim-docs/trunk/images/png/roll_pitch_yaw.png"
+   inkscape:export-filename="/home/cel/Dropbox/MScSim/docs_tex/images/png/roll_pitch_yaw.png"
    inkscape:export-xdpi="300"
    inkscape:export-ydpi="300">
   <defs
@@ -340,15 +340,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
-     inkscape:cx="-244.3273"
-     inkscape:cy="39.876868"
+     inkscape:cx="-446.35781"
+     inkscape:cy="48.968241"
      inkscape:document-units="cm"
      inkscape:current-layer="layer1"
      showgrid="false"
-     units="pt"
+     units="cm"
      borderlayer="true"
      inkscape:window-width="1920"
-     inkscape:window-height="1012"
+     inkscape:window-height="1010"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -372,17 +372,17 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-224.68057)">
+     transform="translate(0,-222.00002)">
     <rect
        style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect1023"
-       width="112.88889"
-       height="72.319443"
-       x="-1.6119162e-06"
-       y="224.68057" />
+       width="120"
+       height="75"
+       x="-6.5962473e-07"
+       y="222.00002" />
     <g
        id="g1075"
-       transform="translate(-3.5555544,2.9598649)">
+       transform="translate(0,1.6195923)">
       <g
          transform="translate(0.58216051)"
          id="g3616">
