@@ -2,6 +2,7 @@ TEX_FILES=\
 	data.tex \
 	fdm.tex \
 	propellers.tex \
+	rotor.tex \
 	terrain.tex
 
 BIBLIOGRAPHY=bibliography.bib

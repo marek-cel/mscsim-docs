@@ -66,37 +66,37 @@ For any further considerations World Geodetic System 1984 as described in \cite{
   \caption{Tait–Bryan angles}
 \end{figure}
 
-Aircraft attitude is defined either by a quaternion or by quasi-Euler Tait-Bryan $\Psi$\nobreakdash-$\Theta$\nobreakdash-$\Phi$ angles in z\nobreakdash-y\nobreakdash-x convention. It is convenient to use such a convention, as this angles becomes aircraft roll, pitch and heading when expressed in North\nobreakdash-East\nobreakdash-Down coordinate system.
+Aircraft attitude is defined either by a quaternion or by quasi-Euler Tait-Bryan $\psi$\nobreakdash-$\theta$\nobreakdash-$\phi$ angles in z\nobreakdash-y\nobreakdash-x convention. It is convenient to use such a convention, as this angles becomes aircraft roll, pitch and heading when expressed in North\nobreakdash-East\nobreakdash-Down coordinate system.
 
 \section{Transformations Between Coordinates Systems}
 
 \subsection{Rotation Matrices}
 
-ransformation to the coordinate system rotated by Tait-Bryan $\Psi$\nobreakdash-$\Theta$\nobreakdash-$\Phi$ angles can be performed using rotation matrix, which is given by the following relations. \cite{Padfield2007, Sibilski2004}
+ransformation to the coordinate system rotated by Tait-Bryan $\psi$\nobreakdash-$\theta$\nobreakdash-$\phi$ angles can be performed using rotation matrix, which is given by the following relations. \cite{Padfield2007, Sibilski2004}
 \begin{align}
-  \boldsymbol T \left( \Phi \right) &=
+  \boldsymbol T \left( \phi \right) &=
   \left[
     \begin{matrix}
       1 &          0 &         0 \\
-      0 &  \cos \Phi & \sin \Phi \\
-      0 & -\sin \Phi & \cos \Phi \\
+      0 &  \cos \phi & \sin \phi \\
+      0 & -\sin \phi & \cos \phi \\
     \end{matrix}
   \right]
   \\
-  \boldsymbol T \left( \Theta \right) &=
+  \boldsymbol T \left( \theta \right) &=
   \left[
     \begin{matrix}
-      \cos \Theta & 0 & -\sin \Theta \\
+      \cos \theta & 0 & -\sin \theta \\
                 0 & 1 &            0 \\
-      \sin \Theta & 0 &  \cos \Theta \\
+      \sin \theta & 0 &  \cos \theta \\
     \end{matrix}
   \right]
   \\
-  \boldsymbol T \left( \Psi \right) &=
+  \boldsymbol T \left( \psi \right) &=
   \left[
     \begin{matrix}
-       \cos\Psi & \sin\Psi & 0 \\
-      -\sin\Psi & \cos\Psi & 0 \\
+       \cos\psi & \sin\psi & 0 \\
+      -\sin\psi & \cos\psi & 0 \\
               0 &        0 & 1 \\
     \end{matrix}
   \right]
@@ -104,21 +104,21 @@ ransformation to the coordinate system rotated by Tait-Bryan $\Psi$\nobreakdash-
 
 \begin{equation}
   \begin{array}{c}
-  \boldsymbol T \left( \Phi,\Theta,\Psi \right) =
-  \boldsymbol T \left( \Phi \right)
-  \boldsymbol T \left( \Theta \right) 
-  \boldsymbol T \left( \Psi \right) = \\
+  \boldsymbol T \left( \phi,\theta,\psi \right) =
+  \boldsymbol T \left( \phi \right)
+  \boldsymbol T \left( \theta \right) 
+  \boldsymbol T \left( \psi \right) = \\
   \left[
     \begin{matrix}
-       \cos \Theta \cos \Psi &
-       \cos \Theta \sin \Psi &
-      -\sin \Theta \\
-       \cos \Psi   \sin \Phi   \sin \Theta - \cos \Phi   \sin \Psi &
-       \cos \Phi   \cos \Psi + \sin \Phi     \sin \Theta \sin \Psi &
-       \cos \Theta \sin \Phi \\
-       \sin \Phi   \sin \Psi + \cos \Phi     \cos \Psi   \sin \Theta &
-       \cos \Phi   \sin \Theta \sin \Psi   - \cos \Psi   \sin \Phi &
-       \cos \Phi   \cos \Theta \\
+       \cos \theta \cos \psi &
+       \cos \theta \sin \psi &
+      -\sin \theta \\
+       \cos \psi   \sin \phi   \sin \theta - \cos \phi   \sin \psi &
+       \cos \phi   \cos \psi + \sin \phi     \sin \theta \sin \psi &
+       \cos \theta \sin \phi \\
+       \sin \phi   \sin \psi + \cos \phi     \cos \psi   \sin \theta &
+       \cos \phi   \sin \theta \sin \psi   - \cos \psi   \sin \phi &
+       \cos \phi   \cos \theta \\
     \end{matrix}
   \right]
   \end{array}
