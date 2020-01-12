@@ -16,7 +16,7 @@
    id="svg8"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:docname="roll_pitch_yaw.svg"
-   inkscape:export-filename="/home/cel/Dropbox/MScSim/docs_tex/images/png/roll_pitch_yaw.png"
+   inkscape:export-filename="/home/cel/dev/git/mscsim-docs/trunk/images/roll_pitch_yaw.png"
    inkscape:export-xdpi="300"
    inkscape:export-ydpi="300">
   <defs
@@ -340,8 +340,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
-     inkscape:cx="-446.35781"
-     inkscape:cy="48.968241"
+     inkscape:cx="-306.95676"
+     inkscape:cy="-42.955641"
      inkscape:document-units="cm"
      inkscape:current-layer="layer1"
      showgrid="false"

@@ -13,7 +13,7 @@ Following assumptions are made:
 
 \subsection{Dynamic Equations}
 
-Dynamic equations of motion are derived in Body Axis System for a rigid aircraft using conservation of momentum and angular momentum principles which are given by the following formulas. \cite{Taylor2005}, \cite{Osinski1997}, \cite{Leyko2002}
+Dynamic equations of motion are derived in Body Axis System for a rigid aircraft using conservation of momentum and angular momentum principles which are given by the following formulas. \cite{Taylor2005, Osinski1997, Leyko2002}
 \begin{align}
   \label{eq-fdm-mom-deriv-1}
   \frac{d {\vec P}_b}{dt}
@@ -35,7 +35,7 @@ Where:
   {\vec Q}_{O,A,b} + {\vec Q}_{O,M,b} + {\vec Q}_{O,LG,b} + {\vec Q}_{O,P,b}
 \end{align}
 
-Momentum and angular momentum are: \cite{Osinski1997}, \cite{Leyko2002}
+Momentum and angular momentum are: \cite{Osinski1997, Leyko2002}
 \begin{align}
   \label{eq-fdm-mom-1} 
   {\vec P}_b
@@ -80,7 +80,7 @@ Where:
   {\vec S}_b = \left[ S_X, S_Y, S_Z \right]^T = m {\vec r}_{CM,b}
 \end{equation}
 
-Derivatives of momentum and angular momentum in rotating reference frame are: \cite{Taylor2005}, \cite{Osinski1997}, \cite{Leyko2002}
+Derivatives of momentum and angular momentum in rotating reference frame are: \cite{Taylor2005, Osinski1997, Leyko2002}
 \begin{align}
   \label{eq-fdm-mom-deriv-2} 
   \frac{d {\vec P}_b}{dt}
@@ -315,7 +315,7 @@ Position vector derivative is given as follows. \cite{Allerton2009}
   %$}
 \end{gather}
 
-Tait-Bryan angles derivatives are given as follows. \cite{Sibilski2004}, \cite{Allerton2009}
+Tait-Bryan angles derivatives are given as follows. \cite{Sibilski2004, Allerton2009}
 \begin{equation}
   \label{eq-fdm-attitude-deriv}
   \left[
@@ -346,7 +346,7 @@ There are singularities in equation (\ref{eq-fdm-attitude-deriv}) for value of $
 
 \subsubsection{Quaternions}
 
-Quaternion time derivative is given as follows. \cite{Sibilski2004}, \cite{StevensLewis1992}
+Quaternion time derivative is given as follows. \cite{Sibilski2004, StevensLewis1992}
 \begin{equation}
   \label{eq-fdm-quaternion-deriv}
   \left[
@@ -412,7 +412,7 @@ Where:
 
 Coordinates vector derivative $\dot {\boldsymbol x}$ can be calculated using formulas (\ref{eq-fdm-position-deriv}) and (\ref{eq-fdm-quaternion-deriv}).
 
-Initial value problems, given by the (\ref{eq-fdm-int-state}) and (\ref{eq-fdm-int-position}) expressions, can be solved using Runge-Kutta 4th-order method which is given as follows. \cite{Press2007}, \cite{Krupowicz1986}, \cite{BaronPiatek2004}
+Initial value problems, given by the (\ref{eq-fdm-int-state}) and (\ref{eq-fdm-int-position}) expressions, can be solved using Runge-Kutta 4th-order method which is given as follows. \cite{Press2007, Krupowicz1986, BaronPiatek2004}
 \begin{equation}
   y \left( t_0 + \Delta t \right)
   \approx

@@ -1,0 +1,42 @@
+\documentclass[12pt,a4paper]{report}
+\special{papersize=210mm,297mm}
+
+\usepackage{mscsim}
+
+\title{Aerodynamic Characteristics of Propellers}
+\author{Marek Cel}
+\date{}
+
+\begin{document}
+  
+  \begin{titlepage}
+    \centering
+    {\huge Aerodynamic Characteristics of Propellers \par}
+  \end{titlepage}
+  
+  %\maketitle
+
+  \noindent Copyright \copyright{} \the\year{} Marek M. Cel. All rights reserved.
+
+  \noindent Author: Marek M. Cel \\
+  Revision: 3 \\
+  Date: \today
+
+  \input{license_cc0}
+  
+  {
+    \clearpage
+    \setlength{\parskip}{0em}
+    \pdfbookmark{\contentsname}{toc}
+    \tableofcontents
+  }
+
+  \include{propellers_0_notation}
+  \include{propellers_1_introduction}
+  
+  \clearpage
+  \bibliography{bibliography} 
+  \addcontentsline{toc}{chapter}{Bibliography}
+  \bibliographystyle{ieeetr}
+  
+\end{document}

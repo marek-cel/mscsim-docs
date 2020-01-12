@@ -1,0 +1,91 @@
+\ProvidesPackage{mscsim}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{amsmath}          %
+\usepackage{blindtext}        %
+\usepackage{booktabs}         % book tables
+\usepackage{color}            %
+\usepackage{enumitem}         %
+\usepackage{gensymb}          %
+\usepackage{geometry}         %
+\usepackage{graphicx}         %
+\usepackage{hyperref}         %
+\usepackage[utf8]{inputenc}   %
+\usepackage[english]{isodate} %
+\usepackage{listings}         % source code listings
+\usepackage{longtable}        %
+\usepackage{mathtools}        %
+\usepackage[all]{nowidow}     %
+\usepackage{setspace}         %
+\usepackage{siunitx}          % alignment
+\usepackage{url}              %
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\frenchspacing
+
+%\linespread{1.3}
+%\onehalfspacing
+%\setstretch{1.3}
+
+\setlength{\parindent}{1em}
+\setlength{\parskip}{1em}
+
+\tolerance=1000
+\hyphenpenalty=100000
+
+\widowpenalty=10000
+\clubpenalty=10000
+%\brokenpenalty=5000
+
+\isodate
+
+\multlinegap=0em
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\definecolor{commentcolor}{rgb}{0,0.6,0}
+\definecolor{keywordcolor}{rgb}{0,0,0.8}
+
+\newenvironment{codelistbash}
+{
+  \linespread{0.9}
+  \lstset
+  {
+    language=bash,
+    basicstyle=\small\ttfamily,
+    numbers=left,
+    numberstyle=\tiny,
+    frame=tb,
+    tabsize=2,
+    columns=fixed,
+    showstringspaces=false,
+    showtabs=false,
+    keepspaces,
+    commentstyle=\color{commentcolor},
+    keywordstyle=\color{keywordcolor}
+  }
+}
+
+\newenvironment{codelistdict}
+{
+  \linespread{0.9}
+  \lstset
+  {
+    language=C++,
+    basicstyle=\small\ttfamily,
+    numbers=left,
+    numberstyle=\tiny,
+    frame=tb,
+    tabsize=2,
+    columns=fixed,
+    showstringspaces=false,
+    showtabs=false,
+    keepspaces,
+    commentstyle=,
+    keywordstyle=
+  }
+}
+
+

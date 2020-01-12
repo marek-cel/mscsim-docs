@@ -1,6 +1,8 @@
 TEX_FILES=\
 	data.tex \
-	fdm.tex
+	fdm.tex \
+	propellers.tex \
+	terrain.tex
 
 BIBLIOGRAPHY=bibliography.bib
 
@@ -32,6 +34,7 @@ all: $(TEX_FILES:.tex=.aux) $(TEX_FILES:.tex=.bbl) $(TEX_FILES:.tex=.pdf)
 	@echo "\e[1;32m"'Compiling file: $*.pdf'"\e[0m"
 	@latex $*.tex
 	@pdflatex $*.tex
+	@cp -f $*.pdf ../$*.pdf
 
 ################################################################################
 
@@ -50,6 +53,7 @@ cleanall: clean $(TEX_FILES:.tex=.temp)
 	@rm -f *.pdf
 	@rm -f *.temp
 	@rm -f images/*.pdf
+	@rm -f images/*.png
 
 .tex.temp: $(TEX_FILES)
 	@echo "\e[1;33m"'Removing file: $*.bib'"\e[0m"

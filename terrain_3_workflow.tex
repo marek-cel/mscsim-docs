@@ -1,0 +1,158 @@
+\chapter{Workflow}
+
+\section{Blue Marble Next Generation}
+
+\subsection{Elevation Data}
+
+\texttt{gdal\_translate} utility can be used to rescale Blue Marble Next Generation elevation data from 8-bit normalized onto real elevation value. Output files must have 16-bit color depth.
+
+\begin{codelistbash}
+  \lstinputlisting{code/terrain_BMNG_elev.sh}
+\end{codelistbash}
+
+\subsection{Land Surface, Ocean Color and Sea Ice}
+
+\texttt{gdal\_translate} utility can be used to create Blue Marble Next Generation Land Surface, Ocean Color and Sea Ice georeferenced TIIF (GeoTIFF) files. 
+
+\begin{codelistbash}
+  \lstinputlisting{code/terrain_BMNG_land.sh}
+\end{codelistbash}
+
+\section{Landsat 7 ETM+}
+
+LibGrid can be used to convert Landsat 7 ETM+ separate bands to true-color image. \cite{Terrain-OpenTerrain}
+
+GDAL can be used for further processing resulting images to match Virtual Planet Builder data format requirements.
+
+\subsection{Extracting}
+
+Following script can be used to extract Landsat data.
+
+\begin{codelistbash}
+  \lstinputlisting{code/terrain_Landsat_extract.sh}
+\end{codelistbash}
+
+\subsection{Merging Bands}
+
+\texttt{gridcopy} tool can be used to set the no-data value to 0.
+
+\begin{codelistbash}
+  \lstinputlisting{code/terrain_Landsat_merge_1.sh}
+\end{codelistbash}
+
+\texttt{merger} can be used to merge separate bands to true-color image.
+
+\begin{codelistbash}
+  \lstinputlisting{code/terrain_Landsat_merge_2.sh}
+\end{codelistbash}
+
+\subsection{Reprojection}
+
+\texttt{gdalwarp} can be used to reproject resulting true-color image to lat/long quasi-projection.
+
+\begin{codelistbash}
+  \lstinputlisting{code/terrain_Landsat_reproject.sh}
+\end{codelistbash}
+
+\subsection{Merging Tiles}
+
+\texttt{gdalbuildvrt} can be used to merge resulting images.
+
+\begin{codelistbash}
+  \lstinputlisting{code/terrain_Landsat_tiles_merge.sh}
+\end{codelistbash}
+
+\texttt{gdal\_translate} can be used to convert merged image to GeoTIFF.
+
+\begin{codelistbash}
+  \lstinputlisting{code/terrain_Landsat_convert.sh}
+\end{codelistbash}
+
+\section{High Resolution Orthoimagery}
+
+\subsection{Extracting}
+
+Following script can be used to extract data.
+
+\begin{codelistbash}
+  \lstinputlisting{code/terrain_HiResOrtho_extract.sh}
+\end{codelistbash}
+
+\subsection{Scaling}
+
+\texttt{gdal\_translate} can be used to scale down images.
+
+\begin{codelistbash}
+  \lstinputlisting{code/terrain_HiResOrtho_scale.sh}
+\end{codelistbash}
+
+\subsection{Merging Tiles}
+
+\texttt{gdalbuildvrt} can be used to merge tiles.
+
+\begin{codelistbash}
+  \lstinputlisting{code/terrain_HiResOrtho_merge.sh}
+\end{codelistbash}
+
+\texttt{gdal\_translate} can be used to convert merged image to GeoTIFF.
+
+\begin{codelistbash}
+  \lstinputlisting{code/terrain_HiResOrtho_convert.sh}
+\end{codelistbash}
+
+\subsection{Reprojection}
+
+\texttt{gdalwarp} can be used to reproject merged image to lat/long quasi-projection.
+
+\begin{codelistbash}
+  \lstinputlisting{code/terrain_HiResOrtho_reproject.sh}
+\end{codelistbash}
+
+\section{Vector Map Level 0}
+
+\subsection{Creating Shapefiles}
+
+Following script can be used to create shapefiles of different VMAP0 layers.
+
+\begin{codelistbash}
+  \lstinputlisting{code/terrain_VMAP0_create.sh}
+\end{codelistbash}
+
+\subsection{Rasterizing}
+
+\texttt{gdal\_rasterize} can be used to rasterize shapefiles.
+
+\begin{codelistbash}
+  \lstinputlisting{code/terrain_VMAP0_rasterize.sh}
+\end{codelistbash}
+
+\subsection{Converting}
+
+\texttt{osgconv} can be used to convert shapefiles to other file formats.
+
+\begin{codelistbash}
+  \lstinputlisting{code/terrain_VMAP0_convert.sh}
+\end{codelistbash}
+
+\section{Building Terrain Database}
+
+Virtual Planet Builder can be used to build terrain database.
+
+\subsection{Generating Basic Terrain}
+
+\begin{codelistbash}
+  \lstinputlisting{code/terrain_VPB_generate.sh}
+\end{codelistbash}
+
+\subsection{Patching Textures}
+
+\begin{codelistbash}
+  \lstinputlisting{code/terrain_VPB_patch_tex.sh}
+\end{codelistbash}
+
+\subsection{Patching Elevation}
+
+\begin{codelistbash}
+  \lstinputlisting{code/terrain_VPB_patch_dem.sh}
+\end{codelistbash}
+
