@@ -16,7 +16,7 @@
    id="svg8"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:docname="coordinate_system_Aero.svg"
-   inkscape:export-filename="/home/cel/dev/git/mscsim-docs/trunk/images/coordinate_system_Aero.png"
+   inkscape:export-filename="/home/cel/dev/git/mscsim-docs/trunk/latex/images/coordinate_system_Aero.png"
    inkscape:export-xdpi="300"
    inkscape:export-ydpi="300">
   <defs
@@ -245,8 +245,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="-152.44008"
-     inkscape:cy="63.403516"
+     inkscape:cx="-330.22693"
+     inkscape:cy="61.383211"
      inkscape:document-units="cm"
      inkscape:current-layer="g1009"
      showgrid="false"

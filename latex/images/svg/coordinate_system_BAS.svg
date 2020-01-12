@@ -16,7 +16,7 @@
    id="svg8"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:docname="coordinate_system_BAS.svg"
-   inkscape:export-filename="/home/cel/dev/git/mscsim-docs/trunk/images/coordinate_system_BAS.png"
+   inkscape:export-filename="/home/cel/dev/git/mscsim-docs/trunk/latex/images/coordinate_system_BAS.png"
    inkscape:export-xdpi="300"
    inkscape:export-ydpi="300">
   <defs
@@ -92,8 +92,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="-241.56754"
-     inkscape:cy="83.496996"
+     inkscape:cx="-419.35439"
+     inkscape:cy="81.476691"
      inkscape:document-units="cm"
      inkscape:current-layer="layer1"
      showgrid="false"

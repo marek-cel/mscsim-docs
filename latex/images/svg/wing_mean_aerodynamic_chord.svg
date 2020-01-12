@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:docname="wing_mean_aerodynamic_chord.svg"
-   inkscape:export-filename="/home/cel/dev/git/mscsim-docs/trunk/images/wing_mean_aerodynamic_chord.png"
+   inkscape:export-filename="/home/cel/dev/git/mscsim-docs/trunk/latex/images/wing_mean_aerodynamic_chord.png"
    inkscape:export-xdpi="299.974"
    inkscape:export-ydpi="299.974">
   <defs
@@ -247,8 +247,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.8284271"
-     inkscape:cx="168.17792"
-     inkscape:cy="107.04529"
+     inkscape:cx="43.727125"
+     inkscape:cy="105.63108"
      inkscape:document-units="cm"
      inkscape:current-layer="g1315"
      showgrid="false"

@@ -15,7 +15,7 @@
    version="1.1"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:docname="coordinate_system_WGS.svg"
-   inkscape:export-filename="/home/cel/dev/git/mscsim-docs/trunk/images/coordinate_system_WGS.png"
+   inkscape:export-filename="/home/cel/dev/git/mscsim-docs/trunk/latex/images/coordinate_system_WGS.png"
    inkscape:export-xdpi="300.22803"
    inkscape:export-ydpi="300.22803">
   <defs
@@ -127,8 +127,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="4.0317704"
-     inkscape:cx="126.74455"
-     inkscape:cy="-42.992914"
+     inkscape:cx="39.437991"
+     inkscape:cy="-43.985034"
      inkscape:document-units="cm"
      inkscape:current-layer="g904"
      showgrid="false"

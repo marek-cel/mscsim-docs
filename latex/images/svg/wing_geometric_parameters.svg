@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:docname="wing_geometric_parameters.svg"
-   inkscape:export-filename="/home/cel/dev/git/mscsim-docs/trunk/images/wing_geometric_parameters.png"
+   inkscape:export-filename="/home/cel/dev/git/mscsim-docs/trunk/latex/images/wing_geometric_parameters.png"
    inkscape:export-xdpi="299.974"
    inkscape:export-ydpi="299.974">
   <defs
@@ -258,8 +258,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.0000001"
-     inkscape:cx="86.349319"
-     inkscape:cy="53.414256"
+     inkscape:cx="-89.650672"
+     inkscape:cy="51.414256"
      inkscape:document-units="cm"
      inkscape:current-layer="g1472"
      showgrid="false"

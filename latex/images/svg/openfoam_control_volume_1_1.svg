@@ -16,7 +16,7 @@
    id="svg8"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:docname="openfoam_control_volume_1_1.svg"
-   inkscape:export-filename="/home/cel/dev/git/mscsim-docs/trunk/images/openfoam_control_volume_1_1.png"
+   inkscape:export-filename="/home/cel/dev/git/mscsim-docs/trunk/latex/images/openfoam_control_volume_1_1.png"
    inkscape:export-xdpi="300"
    inkscape:export-ydpi="300">
   <defs
@@ -77,8 +77,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.0533093"
-     inkscape:cx="-345.58094"
-     inkscape:cy="10.236863"
+     inkscape:cx="-679.76578"
+     inkscape:cy="6.439308"
      inkscape:document-units="cm"
      inkscape:current-layer="layer1"
      showgrid="false"
