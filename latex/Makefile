@@ -34,7 +34,6 @@ all: $(TEX_FILES:.tex=.aux) $(TEX_FILES:.tex=.bbl) $(TEX_FILES:.tex=.pdf)
 	@echo "\e[1;32m"'Compiling file: $*.pdf'"\e[0m"
 	@latex $*.tex
 	@pdflatex $*.tex
-	@cp -f $*.pdf ../$*.pdf
 
 ################################################################################
 
