@@ -46,14 +46,14 @@ clean:
 	@rm -f *.out
 	@rm -f *.run.xml
 	@rm -f *.toc
+	@rm -f images/*.pdf
+	@rm -f images/*.png
 
 cleanall: clean $(TEX_FILES:.tex=.temp)
 	@rm -f *.bak
 	@rm -f *.dvi
 	@rm -f *.pdf
 	@rm -f *.temp
-	@rm -f images/*.pdf
-	@rm -f images/*.png
 
 .tex.temp: $(TEX_FILES)
 	@echo "\e[1;33m"'Removing file: $*.bib'"\e[0m"

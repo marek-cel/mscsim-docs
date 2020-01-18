@@ -4,7 +4,7 @@
 
 \subsection{Rotor Axis System}
 
-Origin of the Rotor Axis System is coincident with the rotor hub center, the x-axis is positive forwards, the y-axis is positive right and z-axis is positive downwards and coincident with the rotor shaft axis.
+Origin of the Rotor Axis System is coincident with the rotor hub center, the x-axis is positive forwards, the y-axis is positive right and z-axis is positive downwards and it is coincident with the rotor shaft axis.
 
 \begin{figure}[h!]
   \centering
@@ -37,3 +37,35 @@ Control-Wind Axis System is very much like Control Axis System, the only differe
 \subsection{Blade Axis System}
 
 Blade Axis System is a coordinate system fixed to the rotor blade, its origin is coincident with the intersection point of blade feathering and flapping hinges axes. The x-axis is coincident with blade feathering axis and pointing outwards, the y-axis lies on XY plane of the Control Axis System and points towards blade leading edge, while the z-axis completes a right-handed coordinate system.
+
+\subsection{Individual Blade Coordinates}
+
+Origin of the Individual Blade Coordinates is coincident with the point of intersection of flapping and feathering hinge axes, x-axis is coincident with the blade chord and points towards trailing edge, y-axis is coincident with the feathering hinge axis and it is positive towards blade tip, while the z-axis completes a right-handed coordinate system.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=100mm]{images/coordinate_system_IBC.eps}
+  \caption{Individual Blade Coordinates}
+\end{figure}
+
+\section{Blades Motion}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=110mm]{images/rotor_hub_hinges.eps}
+  \caption{Rotor blade hinges}
+\end{figure}
+
+Neglecting blade flapping motions occuring more frequent than once per revolution flapping angle can be expressed as:
+
+\begin{equation}
+\beta \left( \Psi \right)
+=
+\beta_0 + \beta_{1c} \cos \Psi + \beta_{1s} \sin \Psi 
+\end{equation}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=100mm]{images/rotor_flapping_angles.eps}
+  \caption{Rotor disc three degrees of freedom}
+\end{figure}
