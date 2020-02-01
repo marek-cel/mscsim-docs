@@ -27,8 +27,14 @@
 #   airfoil_SC1095.gnuplot
 
 # gnuplot \
-#   uh60_blade_sc1095_cx.gnuplot \
-#   uh60_blade_sc1095_cz.gnuplot
+#   uh60_blade_sc1094r8_cm.gnuplot \
+#   uh60_blade_sc1094r8_cx.gnuplot \
+#   uh60_blade_sc1094r8_cz.gnuplot
+
+gnuplot \
+  uh60_blade_sc1095_cm.gnuplot \
+  uh60_blade_sc1095_cx.gnuplot \
+  uh60_blade_sc1095_cz.gnuplot
 
 # gnuplot \
 #   uh60_fuselage_alpha_cm.gnuplot \
