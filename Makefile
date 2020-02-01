@@ -1,9 +1,9 @@
 all:
-	cd latex; make;
-	cp -f latex/*.pdf .
+	cd tex; make;
+	cp -f tex/*.pdf .
 
 clean:
-	cd latex; make clean;
+	cd tex; make clean;
 
 cleanall:
-	cd latex; make cleanall;
+	cd tex; make cleanall;

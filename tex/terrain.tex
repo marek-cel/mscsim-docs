@@ -1,0 +1,44 @@
+\documentclass[12pt,a4paper]{report}
+\special{papersize=210mm,297mm}
+
+\usepackage{mscsim}
+
+\title{Terrain Data for Flight Simulators}
+\author{Marek Cel}
+\date{}
+
+\begin{document}
+  
+  \begin{titlepage}
+    \centering
+    {\huge Terrain Data for Flight Simulators\par}
+  \end{titlepage}
+  
+  %\maketitle
+
+  \noindent Copyright \copyright{} \the\year{} Marek M. Cel. All rights reserved.
+
+  \noindent Author: Marek M. Cel \\
+  Revision: 8 \\
+  Date: \today
+
+  \input{license_cc0}
+  
+  {
+    \clearpage
+    \setlength{\parskip}{0em}
+    \pdfbookmark[0]{\contentsname}{toc}
+    \tableofcontents
+  }
+
+  \include{terrain_1}
+  \include{terrain_2}
+  \include{terrain_3}
+  \include{terrain_4}
+  
+  \clearpage
+  \bibliography{bibliography} 
+  \addcontentsline{toc}{chapter}{Bibliography}
+  \bibliographystyle{ieeetr}
+  
+\end{document}

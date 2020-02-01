@@ -1,0 +1,47 @@
+\documentclass[12pt,a4paper]{article}
+\special{papersize=210mm,297mm}
+
+\usepackage{mscsim}
+
+\title{UH-60 - Flight Simulation Data}
+\author{Marek Cel}
+\date{}
+
+\begin{document}
+  
+  \begin{titlepage}
+    \centering
+    {\huge UH-60 - Flight Simulation Data\par}
+  \end{titlepage}
+  
+  %\maketitle
+
+  \noindent Copyright \copyright{} \the\year{} Marek M. Cel. All rights reserved.
+
+  \noindent Author: Marek M. Cel \\
+  Revision: 7 \\
+  Date: \today
+
+  \input{license_cc0}
+  
+  \incgraph[documentpaper][width=\paperwidth,height=\paperheight]{eps/uh60_3view.eps}
+  
+  {
+    \clearpage
+    \setlength{\parskip}{0em}
+    \pdfbookmark[1]{\contentsname}{toc}
+    \tableofcontents
+  }
+
+  \include{data_uh60_1}
+  \include{data_uh60_2}
+  \include{data_uh60_3}
+  \include{data_uh60_4}
+  \include{data_uh60_5}
+  
+  \clearpage
+  \bibliography{bibliography} 
+  \addcontentsline{toc}{section}{Bibliography}
+  \bibliographystyle{ieeetr}
+  
+\end{document}

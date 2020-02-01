@@ -3,7 +3,7 @@ Documentation for [MScSim](https://github.com/marek-cel/mscsim).
 
 - [Flight Dynamics Model for the Real-Time Flight Simulation](fdm.pdf)
 - [Aircraft Data for the Real-Time Flight Simulation](data.pdf)
-- [Helicopter Rotor Model](rotor.pdf)
+- [Helicopter Rotor Models](rotor.pdf)
 - [Aerodynamic Characteristics of Propellers](propellers.pdf)
 - [Terrain Data for Flight Simulators](terrain.pdf)
 - [C-130 Flight Simulation Data](data_c130.pdf)

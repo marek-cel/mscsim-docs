@@ -1,0 +1,54 @@
+\section{Mass Data}
+
+Data given in \cite{UH60_OperatorsManual,NASA-CR-166309,UH60_MaintenanceManual} were used to calculate empty aircraft inertia tensor and center of mass coordinates. Results are given in the following table.
+
+\begin{table}[h!]
+  \begin{center}
+    \begin{tabular}{ | l | c | }
+      \hline
+      \textbf{Parameter} & \textbf{Value} \\ \hline
+      Center of mass x-coordinate & -0.15 m \\ \hline
+      Center of mass y-coordinate &  0.00 m \\ \hline
+      Center of mass z-coordinate & -0.25 m \\ \hline
+      Moment of inertia $I_X$ &  6~543.0 kg$\cdot$m\textsuperscript{2} \\ \hline
+      Moment of inertia $I_Y$ & 46~293.1 kg$\cdot$m\textsuperscript{2} \\ \hline
+      Moment of inertia $I_Z$ & 43~498.3 kg$\cdot$m\textsuperscript{2} \\ \hline
+      Cross product of inertia $I_{XY}$ &      0.0 kg$\cdot$m\textsuperscript{2} \\ \hline
+      Cross product of inertia $I_{XZ}$ & -3~753.0 kg$\cdot$m\textsuperscript{2} \\ \hline
+      Cross product of inertia $I_{YZ}$ &      0.0 kg$\cdot$m\textsuperscript{2} \\ \hline
+    \end{tabular}
+    \caption{Empty aircraft inertia tensor and center of mass coordinates}
+  \end{center}
+\end{table}
+
+\clearpage
+
+\newgeometry{margin=1cm}
+
+\thispagestyle{empty}
+
+\begin{sidewaystable}
+  \begin{center}
+    \scalebox{0.8}
+    {
+      \begin{tabular}{ l S S S S S S S S S S S S S }
+        \toprule
+        \textbf{Structure group} & \textbf{Weight} & \multicolumn{3}{c}{\textbf{Coordinates}} & \multicolumn{3}{c}{\textbf{First moment of mass}} & \multicolumn{6}{c}{\textbf{Moment of inertia}} \\
+        & {[kg]} & \multicolumn{3}{c}{[m]} & \multicolumn{3}{c}{[kg$\cdot$m]} & \multicolumn{6}{c}{[kg$\cdot$m\textsuperscript{2}]} \\ \midrule
+        & $m$ & $x$ & $y$ & $z$ & $S_X$ & $S_Y$ & $S_Z$ & $I_X$ & $I_Y$ & $I_Z$  & $I_{XY}$ & $I_{XZ}$ & $I_{YZ}$ \\ \midrule
+        \csvreader[
+          column count=14,
+          no head,
+          late after line=\\
+        ]
+        {csv/uh60_mass_intermediate.csv}
+        {}
+        {\csvlinetotablerow}
+        \bottomrule
+      \end{tabular}
+    }
+    \caption{Mass data intermediate results}
+  \end{center}
+\end{sidewaystable}
+
+\restoregeometry

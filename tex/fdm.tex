@@ -1,0 +1,48 @@
+\documentclass[12pt,a4paper]{report}
+\special{papersize=210mm,297mm}
+
+\usepackage{mscsim}
+
+\title{Flight Dynamics Model for the Real-Time Flight Simulation}
+\author{Marek Cel}
+\date{}
+
+\begin{document}
+  
+  \begin{titlepage}
+    \centering
+    {\huge Flight Dynamics Model for the Real-Time Flight Simulation\par}
+  \end{titlepage}
+  
+  %\maketitle
+
+  \noindent Copyright \copyright{} \the\year{} Marek M. Cel. All rights reserved.
+
+  \noindent Author: Marek M. Cel \\
+  Revision: 13 \\
+  Date: \today
+
+  \input{license_cc0}
+  
+  {
+    \clearpage
+    \setlength{\parskip}{0em}
+    \pdfbookmark[0]{\contentsname}{toc}
+    \tableofcontents
+  }
+
+  \include{fdm_0}
+  \include{fdm_1}
+  \include{fdm_2}
+  \include{fdm_3}
+  \include{fdm_4}
+  \include{fdm_5}
+  \include{fdm_6}
+  \include{fdm_7}
+  
+  \clearpage
+  \bibliography{bibliography} 
+  \addcontentsline{toc}{chapter}{Bibliography}
+  \bibliographystyle{ieeetr}
+  
+\end{document}
