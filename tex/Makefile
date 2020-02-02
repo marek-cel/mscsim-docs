@@ -1,13 +1,10 @@
-# TEX_FILES=\
-# 	data.tex \
-# 	data_uh60.tex \
-# 	fdm.tex \
-# 	propellers.tex \
-# 	rotor.tex \
-# 	terrain.tex
-
 TEX_FILES=\
-	data_uh60.tex
+	data.tex \
+	data_uh60.tex \
+	fdm.tex \
+	propellers.tex \
+	rotor.tex \
+	terrain.tex
 
 BIBLIOGRAPHY=bibliography.bib
 

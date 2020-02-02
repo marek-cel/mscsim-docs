@@ -156,12 +156,30 @@
 {1=\colaoa,2=\colcz,3=\colcx,4=\colcm}
 {\colaoa & \colcz & \colcx & \colcm}
 
+\csvreader[
+  no head,
+  longtable=ccc,
+  table head=
+    \toprule
+    $\alpha$ & $C_L$ & $C_D$ \\ 
+    {[deg]} & {[-]} & {[-]} \\ \midrule
+    \endfirsthead
+    $\alpha$ & $C_L$ & $C_D$ \\ 
+    {[deg]} & {[-]} & {[-]} \\ \midrule
+    \endhead,
+  before first line={},
+  late after line=\\,
+  late after last line=\\ \bottomrule \caption{SC1095 aerodynamic coefficients \cite{NASA-CR-166309}},
+  before reading={},
+  after reading={}
+]
+{csv/SC1095_CR-166309.csv}
+{1=\colaoa,2=\colcz,3=\colcx}
+{\colaoa & \colcz & \colcx}
+
 \clearpage
-
 \newgeometry{margin=1cm}
-
 \thispagestyle{empty}
-
 \begin{sidewaystable}
   \begin{center}
     \scalebox{0.9}
@@ -184,7 +202,33 @@
     \caption{SC1095 lift coefficient \cite{NASA-CR-166309}}
   \end{center}
 \end{sidewaystable}
+\restoregeometry
 
+\clearpage
+\newgeometry{margin=1cm}
+\thispagestyle{empty}
+\begin{sidewaystable}
+  \begin{center}
+    \scalebox{0.9}
+    {
+      \begin{tabular}{ c c c c c c c c c c c c }
+        \toprule
+        $\alpha$ & \multicolumn{11}{c}{$C_D$} \\
+        {[deg]} & Ma=0.0 & Ma=0.1 & Ma=0.2 & Ma=0.3 & Ma=0.4 & Ma=0.5 & Ma=0.6 & Ma=0.7 & Ma=0.8 & Ma=0.9 & Ma=10.0 \\ \midrule
+        \csvreader[
+          column count=12,
+          no head,
+          late after line=\\
+        ]
+        {csv/SC1095_CR-166309_cx.csv}
+        {}
+        {\csvlinetotablerow}
+        \bottomrule
+      \end{tabular}
+    }
+    \caption{SC1095 drag coefficient \cite{NASA-CR-166309}}
+  \end{center}
+\end{sidewaystable}
 \restoregeometry
 
 \begin{figure}[p]

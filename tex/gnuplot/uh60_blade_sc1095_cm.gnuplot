@@ -18,4 +18,4 @@ set style line 6 lc rgb '#db843d' lw 4 pt 1 ps 0
 set datafile separator ","
 plot \
   "../csv/xfoil_out_sc1095.csv" using 1:4 with linespoints ls 1 title "XFOIL", \
-  "../csv/SC1095_TM-86719.csv" using 1:4 with linespoints ls 2 title "[NASA-TM-86719]"
+  "../csv/SC1095_TM-86719.csv" using 1:4 with linespoints ls 3 title "[NASA-TM-86719]"
