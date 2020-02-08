@@ -1,50 +1,298 @@
-\section{Mass Data}
+\section{Empennage}
 
-Data given in \cite{UH60_OperatorsManual,NASA-CR-166309,UH60_MaintenanceManual} were used to calculate empty aircraft inertia tensor and center of mass coordinates. Results are given in the following table.
+\begin{tabularx}{\textwidth}{ | L | c | c | }
+  \hline
+  \textbf{Parameter}                    & \textbf{Value}   & \textbf{Reference} \\ \hline
+  \endfirsthead
+  \hline
+  \textbf{Parameter}                    & \textbf{Value}   & \textbf{Reference} \\ \hline
+  \endhead
+  Horizontal tail span                  & 4.38 m           & \cite{NASA-CR-166309} \\ \hline
+  Horizontal tail area                  & 4.18 m\textsuperscript{2} & \cite{Janes20042005,NASA-CR-166309} \\ \hline
+  Horizontal tail root chord            & 1.12 m           & \cite{NASA-CR-166309} \\ \hline
+  Horizontal tail tip chord             & 0.77 m           & \cite{NASA-CR-166309} \\ \hline
+  Horizontal tail sweep (0.25MAC)       & 0.0\degree       & \cite{NASA-CR-166309} \\ \hline
+  Horizontal tail aspect ratio          & 4.6              & \cite{NASA-CR-166309} \\ \hline
+  Horizontal tail airfoil               & NACA 0014        & \cite{NASA-CR-166309} \\ \hline
+  Horizontal tail stationline           & 17.79 m          & \cite{NASA-CR-166309,NASA-TM-85890} \\ \hline
+  Horizontal tail waterline             & 6.20 m           & \cite{NASA-CR-166309,NASA-TM-85890} \\ \hline
+  Horizontal tail deflection limit      & up -30\degree, down +35\degree & \cite{UH60_OperatorsManual} \\ \hline
+  Vertical tail span                    & 2.49 m           & \cite{NASA-CR-166309} \\ \hline
+  Vertical tail area                    & 3.00 m\textsuperscript{2} & \cite{Janes20042005,NASA-CR-166309} \\ \hline
+  Vertical tail root chord              & 1.83 m           & \cite{NASA-CR-166309} \\ \hline
+  Vertical tail tip chord               & 0.86 m           & \cite{NASA-CR-166309} \\ \hline
+  Vertical tail sweep (0.25MAC)         & 41.0\degree      & \cite{NASA-CR-166309} \\ \hline
+  Vertical tail aspect ratio            & 1.92             & \cite{NASA-CR-166309} \\ \hline
+  Vertical tail airfoil                 & NACA 0021 (Mod)  & \cite{NASA-CR-166309} \\ \hline
+  Vertical tail stationline             & 17.65 m          & \cite{NASA-CR-166309,NASA-TM-85890} \\ \hline
+  Vertical tail waterline               & 6.93 m           & \cite{NASA-CR-166309,NASA-TM-85890} \\ \hline
+  \caption{Empennage data}
+\end{tabularx}
 
-\begin{table}[h!]
-  \begin{center}
-    \begin{tabular}{ | l | c | }
-      \hline
-      \textbf{Parameter} & \textbf{Value} \\ \hline
-      Center of mass x-coordinate & -0.15 m \\ \hline
-      Center of mass y-coordinate &  0.00 m \\ \hline
-      Center of mass z-coordinate & -0.25 m \\ \hline
-      Moment of inertia $I_X$ &  6~543.0 kg$\cdot$m\textsuperscript{2} \\ \hline
-      Moment of inertia $I_Y$ & 46~293.1 kg$\cdot$m\textsuperscript{2} \\ \hline
-      Moment of inertia $I_Z$ & 43~498.3 kg$\cdot$m\textsuperscript{2} \\ \hline
-      Cross product of inertia $I_{XY}$ &      0.0 kg$\cdot$m\textsuperscript{2} \\ \hline
-      Cross product of inertia $I_{XZ}$ & -3~753.0 kg$\cdot$m\textsuperscript{2} \\ \hline
-      Cross product of inertia $I_{YZ}$ &      0.0 kg$\cdot$m\textsuperscript{2} \\ \hline
-    \end{tabular}
-    \caption{Empty aircraft inertia tensor and center of mass coordinates}
-  \end{center}
-\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \clearpage
-\newgeometry{margin=1cm}
-\thispagestyle{empty}
-\begin{sidewaystable}
-  \begin{center}
-    \scalebox{0.8}
-    {
-      \begin{tabular}{ l S S S S S S S S S S S S S }
-        \toprule
-        \textbf{Structure group} & \textbf{Weight} & \multicolumn{3}{c}{\textbf{Coordinates}} & \multicolumn{3}{c}{\textbf{First moment of mass}} & \multicolumn{6}{c}{\textbf{Moment of inertia}} \\
-        & {[kg]} & \multicolumn{3}{c}{[m]} & \multicolumn{3}{c}{[kg$\cdot$m]} & \multicolumn{6}{c}{[kg$\cdot$m\textsuperscript{2}]} \\ \midrule
-        & $m$ & $x$ & $y$ & $z$ & $S_X$ & $S_Y$ & $S_Z$ & $I_X$ & $I_Y$ & $I_Z$  & $I_{XY}$ & $I_{XZ}$ & $I_{YZ}$ \\ \midrule
-        \csvreader[
-          column count=14,
-          no head,
-          late after line=\\
-        ]
-        {csv/uh60_mass_intermediate.csv}
-        {}
-        {\csvlinetotablerow}
-        \bottomrule
-      \end{tabular}
-    }
-    \caption{Mass data intermediate results}
-  \end{center}
-\end{sidewaystable}
-\restoregeometry
+\subsection{Main Rotor Inplane Wash at the Horizontal Tail}
+
+\csvreader[
+  no head,
+  longtable=cccc,
+  table head=
+    \toprule
+    $\chi$ & \multicolumn{3}{c}{EKXH1} \\
+    {[deg]} & {AA1FMR=-6.0} & {AA1FMR=0.0} & {AA1FMR=6.0} \\ \midrule
+    \endfirsthead
+    $\chi$ & \multicolumn{3}{c}{EKXH1} \\
+    {[deg]} & {AA1FMR=-6.0} & {AA1FMR=0.0} & {AA1FMR=6.0} \\ \midrule
+    \endhead,
+  before first line={},
+  late after line=\\,
+  late after last line=\\ \bottomrule \caption{Main rotor inplane wash at the horizontal tail \cite{NASA-CR-166309}},
+  before reading={},
+  after reading={}
+]
+{csv/uh60_stab_h_mr_inplane.csv}
+{1=\colchi,2=\colii,3=\coliii,4=\coliv}
+{\colchi & \colii & \coliii & \coliv}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=140mm]{eps/uh60_stab_h_mr_inplane.eps}
+  \caption{Main rotor inplane wash at the horizontal tail \cite{NASA-CR-166309}}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage
+\subsection{Main Rotor Downwash at the Horizontal Tail}
+
+\csvreader[
+  no head,
+  longtable=cccc,
+  table head=
+    \toprule
+    $\chi$ & \multicolumn{3}{c}{EKZH1} \\
+    {[deg]} & {AA1FMR=-6.0} & {AA1FMR=0.0} & {AA1FMR=6.0} \\ \midrule
+    \endfirsthead
+    $\chi$ & \multicolumn{3}{c}{EKZH1} \\
+    {[deg]} & {AA1FMR=-6.0} & {AA1FMR=0.0} & {AA1FMR=6.0} \\ \midrule
+    \endhead,
+  before first line={},
+  late after line=\\,
+  late after last line=\\ \bottomrule \caption{Main rotor downwash at the horizontal tail \cite{NASA-CR-166309}},
+  before reading={},
+  after reading={}
+]
+{csv/uh60_stab_h_mr_downwash.csv}
+{1=\colchi,2=\colii,3=\coliii,4=\coliv}
+{\colchi & \colii & \coliii & \coliv}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=140mm]{eps/uh60_stab_h_mr_downwash.eps}
+  \caption{Main rotor downwash at the horizontal tail \cite{NASA-CR-166309}}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage
+\subsection{Dynamic Pressure Loss at the Horizontal Tail}
+
+\csvreader[
+  no head,
+  longtable=cc,
+  table head=
+    \toprule
+    $\alpha$ & QH1QWF \\
+    {[deg]} & {[-]} \\ \midrule
+    \endfirsthead
+    $\alpha$ & QH1QWF \\
+    {[deg]} & {[-]} \\ \midrule
+    \endhead,
+  before first line={},
+  late after line=\\,
+  late after last line=\\ \bottomrule \caption{Dynamic pressure loss at the horizontal tail \cite{NASA-CR-166309}},
+  before reading={},
+  after reading={}
+]
+{csv/uh60_stab_h_press_loss.csv}
+{1=\colaoa,2=\coldyn}
+{\colaoa & \coldyn}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=140mm]{eps/uh60_stab_h_press_loss.eps}
+  \caption{Dynamic pressure loss at the horizontal tail \cite{NASA-CR-166309}}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage
+\subsection{Fuselage Downwash at the Horizontal Tail}
+
+\csvreader[
+  no head,
+  longtable=cc,
+  table head=
+    \toprule
+    $\alpha_f$ & $\epsilon_h$ \\
+    {[deg]} & {[deg]} \\ \midrule
+    \endfirsthead
+    $\alpha_f$ & $\epsilon_h$ \\
+    {[deg]} & {[deg]} \\ \midrule
+    \endhead,
+  before first line={},
+  late after line=\\,
+  late after last line=\\ \bottomrule \caption{Fuselage downwash at the horizontal tail \cite{NASA-CR-166309}},
+  before reading={},
+  after reading={}
+]
+{csv/uh60_stab_h_f_downwash.csv}
+{1=\colaoa,2=\coleps}
+{\colaoa & \coleps}
+
+\begin{figure}[p!]
+  \centering
+  \includegraphics[width=140mm]{eps/uh60_stab_h_f_downwash.eps}
+  \caption{Fuselage downwash at the horizontal tail \cite{NASA-CR-166309}}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage
+\subsection{Horizontal Tail Aerodynamic Coefficients}
+
+\csvreader[
+  no head,
+  longtable=ccc,
+  table head=
+    \toprule
+    $\alpha$ & $C_{X,h}$ & $C_{Z,h}$ \\
+    {[deg]} & {[-]} & {[-]} \\ \midrule
+    \endfirsthead
+    $\alpha$ & $C_{X,h}$ & $C_{Z,h}$ \\
+    {[deg]} & {[-]} & {[-]} \\ \midrule
+    \endhead,
+  before first line={},
+  late after line=\\,
+  late after last line=\\ \bottomrule \caption{Horizontal tail aerodynamic coefficients \cite{NASA-CR-166309}},
+  before reading={},
+  after reading={}
+]
+{csv/uh60_aero_stab_h.csv}
+{1=\colaoa,2=\colhcx,3=\colhcz}
+{\colaoa & \colhcx & \colhcz}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=140mm]{eps/uh60_stab_h_cx.eps}
+  \caption{Horizontal tail drag coefficient due to angle of attack \cite{NASA-CR-166309}}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=140mm]{eps/uh60_stab_h_cz.eps}
+  \caption{Horizontal tail lift coefficient due to angle of attack \cite{NASA-CR-166309}}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage
+\subsection{Dynamic Pressure Loss at the Vertical Tail}
+
+\csvreader[
+  no head,
+  longtable=cc,
+  table head=
+    \toprule
+    $\beta$ & QP3QWF \\
+    {[deg]} & {[-]} \\ \midrule
+    \endfirsthead
+    $\beta$ & QP3QWF \\
+    {[deg]} & {[-]} \\ \midrule
+    \endhead,
+  before first line={},
+  late after line=\\,
+  late after last line=\\ \bottomrule \caption{Dynamic pressure loss at the vertical tail \cite{NASA-CR-166309}},
+  before reading={},
+  after reading={}
+]
+{csv/uh60_stab_v_press_loss.csv}
+{1=\colbeta,2=\coldyn}
+{\colbeta & \coldyn}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=140mm]{eps/uh60_stab_v_press_loss.eps}
+  \caption{Dynamic pressure loss at the vertical tail \cite{NASA-CR-166309}}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage
+\subsection{Fuselage Sidewash at the Vertical Tail}
+
+\csvreader[
+  no head,
+  longtable=cc,
+  table head=
+    \toprule
+    $\beta_f$ & $\epsilon_v$ \\
+    {[deg]} & {[deg]} \\ \midrule
+    \endfirsthead
+    $\beta_f$ & $\epsilon_v$ \\
+    {[deg]} & {[deg]} \\ \midrule
+    \endhead,
+  before first line={},
+  late after line=\\,
+  late after last line=\\ \bottomrule \caption{Fuselage sidewash at the vertical tail \cite{NASA-CR-166309}},
+  before reading={},
+  after reading={}
+]
+{csv/uh60_stab_v_f_sidewash.csv}
+{1=\colbeta,2=\coleps}
+{\colbeta & \coleps}
+
+\begin{figure}[p!]
+  \centering
+  \includegraphics[width=140mm]{eps/uh60_stab_v_f_sidewash.eps}
+  \caption{Fuselage sidewash at the vertical tail \cite{NASA-CR-166309}}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage
+\subsection{Vertical Tail Aerodynamic Coefficients}
+
+\csvreader[
+  no head,
+  longtable=ccc,
+  table head=
+    \toprule
+    $\beta$ & $C_{X,v}$ & $C_{Y,v}$ \\
+    {[deg]} & {[-]} & {[-]} \\ \midrule
+    \endfirsthead
+    $\beta$ & $C_{X,v}$ & $C_{Y,v}$ \\
+    {[deg]} & {[-]} & {[-]} \\ \midrule
+    \endhead,
+  before first line={},
+  late after line=\\,
+  late after last line=\\ \bottomrule \caption{Vertical tail aerodynamic coefficients \cite{NASA-CR-166309}},
+  before reading={},
+  after reading={}
+]
+{csv/uh60_aero_stab_v.csv}
+{1=\colbeta,2=\colvcx,3=\colvcy}
+{\colbeta & \colvcx & \colvcy}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=140mm]{eps/uh60_stab_v_cx.eps}
+  \caption{Vertical tail drag coefficient due to sideslip \cite{NASA-CR-166309}}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=140mm]{eps/uh60_stab_v_cy.eps}
+  \caption{Vertical tail side force coefficient due to sideslip \cite{NASA-CR-166309}}
+\end{figure}

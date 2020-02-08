@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 793.7008 1122.5197"
+   width="160mm"
+   height="260mm"
+   viewBox="0 0 604.72442 982.67718"
    id="svg2"
    version="1.1"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
@@ -45,9 +45,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.50000001"
-     inkscape:cx="153.16684"
-     inkscape:cy="382.45189"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="305.02668"
+     inkscape:cy="231.38005"
      inkscape:document-units="cm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -88,7 +88,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -96,7 +96,7 @@
      inkscape:label="Warstwa 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(308,375.32896)"
+     transform="translate(308,235.48644)"
      style="display:inline">
     <path
        style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -117,16 +117,16 @@
        inkscape:connector-curvature="0"
        transform="translate(0,-647.63784)" />
     <rect
-       style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.37795275;stroke-miterlimit:4;stroke-dasharray:3.02362196, 3.02362196;stroke-dashoffset:0;stroke-opacity:1"
+       style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.37795275;stroke-miterlimit:4;stroke-dasharray:3.02362197, 3.02362197;stroke-dashoffset:0;stroke-opacity:1"
        id="rect1177"
-       width="1122.5197"
-       height="793.70074"
-       x="-747.19073"
-       y="-307.99997"
+       width="982.67712"
+       height="604.72443"
+       x="-747.19067"
+       y="-308"
        transform="rotate(-90)" />
     <g
        id="g7191"
-       transform="rotate(-90,116.70252,313.48819)">
+       transform="rotate(-90,75.419051,424.69293)">
       <path
          transform="rotate(170,28.330481,-323.81889)"
          inkscape:transform-center-y="-127.73947"

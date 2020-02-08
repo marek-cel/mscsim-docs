@@ -16,7 +16,7 @@
    id="svg8"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:docname="uh60_blade.svg"
-   inkscape:export-filename="/home/cel/dev/git/mscsim-docs/trunk/tex/svg/uh60_blade.svg.png"
+   inkscape:export-filename="/home/cel/dev/git/mscsim-docs/trunk/tex/svg/uh60_blade.png"
    inkscape:export-xdpi="300"
    inkscape:export-ydpi="300">
   <defs
@@ -230,8 +230,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="113.81617"
-     inkscape:cy="28.619279"
+     inkscape:cx="-200.66057"
+     inkscape:cy="181.76296"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -253,7 +253,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -279,9 +279,9 @@
          d="m 17.174345,156.29916 h 3.39303 v 4.09926 h 62.864373 l 0.49566,0.488 h 14.879505 l 0.569227,-0.488 h 6.39846 l 7.3203,2.67694 v -7.5456 l -6.60598,-2.22933 H 105.7746 17.174345 Z"
          style="fill:none;stroke:#000000;stroke-width:0.40000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <path
-         sodipodi:nodetypes="cccc"
+         sodipodi:nodetypes="cccccccccccccccccccccccccccccc"
          inkscape:connector-curvature="0"
-         d="m 21.793083,155.8047 h -7.191914 v -1.98455 h 11.364203 l 0.211306,0.0359 0.444836,0.10065 0.332907,0.0949 0.229591,0.10352 0.198023,0.13803 0.132015,0.1294 0.06601,0.15816 0.05166,0.24442 v 0.87131 l -0.05453,0.29619 -0.120535,0.25306 -0.169325,0.19841 -0.229592,0.16679 -0.266899,0.16103 -0.25255,0.0489 -0.27838,0.0374 -0.32717,-0.006 -0.315688,-0.0201 -0.398915,-0.0863 -0.596939,-0.16966 -0.605548,-0.18979 -0.628507,-0.18116 -0.571109,-0.15241 -0.482144,-0.14666 -0.304207,-0.0834 z"
+         d="m 18.513163,155.8047 h -3.911994 v -1.98455 h 8.084283 l 0.211306,0.0359 0.444836,0.10065 0.332907,0.0949 0.229591,0.10352 0.198023,0.13803 0.132015,0.1294 0.06601,0.15816 0.05166,0.24442 v 0.87131 l -0.05453,0.29619 -0.120535,0.25306 -0.169325,0.19841 -0.229592,0.16679 -0.266899,0.16103 -0.25255,0.0489 -0.27838,0.0374 -0.32717,-0.006 -0.315688,-0.0201 -0.398915,-0.0863 -0.596939,-0.16966 -0.605548,-0.18979 -0.628507,-0.18116 -0.571109,-0.15241 -0.482144,-0.14666 -0.304207,-0.0834 z"
          style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.40000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="path824" />
       <path

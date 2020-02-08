@@ -1,4 +1,4 @@
-set terminal postscript eps size 5.5,2.8 enhanced color font 'Helvetica,18'
+set terminal postscript eps size 5.5,3.5 enhanced color font 'Helvetica,18'
 set output "../eps/openfoam_f16_cz.eps"
 set xlabel "Angle of Attack [deg]"
 set ylabel "Lift Coefficient [-]"

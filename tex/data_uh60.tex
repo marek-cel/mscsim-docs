@@ -3,7 +3,7 @@
 
 \usepackage{mscsim}
 
-\title{UH-60 - Flight Simulation Data}
+\title{UH-60 - Flight Simulation Model}
 \author{Marek Cel}
 \date{}
 
@@ -11,7 +11,7 @@
   
   \begin{titlepage}
     \centering
-    {\huge UH-60 - Flight Simulation Data\par}
+    {\huge UH-60 - Flight Simulation Model\par}
   \end{titlepage}
   
   %\maketitle
@@ -24,8 +24,17 @@
 
   \input{license_cc0}
   
-  \incgraph[documentpaper][width=\paperwidth,height=\paperheight]{eps/uh60_3view.eps}
+  \clearpage
+  \newgeometry{margin=1cm}
   
+  \begin{figure}[p]
+    \centering
+    \includegraphics[width=160mm]{eps/uh60_3view.eps}
+    \caption{UH-60}
+  \end{figure}
+
+  \restoregeometry
+
   {
     \clearpage
     \setlength{\parskip}{0em}
@@ -38,6 +47,10 @@
   \include{data_uh60_3}
   \include{data_uh60_4}
   \include{data_uh60_5}
+  \include{data_uh60_6}
+  \include{data_uh60_7}
+  \include{data_uh60_8}
+  \include{data_uh60_9}
   
   \clearpage
   \bibliography{bibliography} 

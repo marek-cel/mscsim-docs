@@ -1,18 +1,126 @@
-\section{Aerodynamic Characteristics}
+\section{Fuselage}
 
-UH-60 aerodynamic characteristics are given in \cite{NASA-CR-166309}.
+\begin{tabularx}{\textwidth}{ | L | c | c | }
+  \hline
+  \textbf{Parameter}                    & \textbf{Value}   & \textbf{Reference} \\ \hline
+  \endfirsthead
+  \hline
+  \textbf{Parameter}                    & \textbf{Value}   & \textbf{Reference} \\ \hline
+  \endhead
+  Fuselage length                       & 15.26 m          & \cite{Janes20042005,NASA-CR-166309} \\ \hline
+  Fuselage width                        & 2.36 m           & \cite{UH60_OperatorsManual,Janes20042005} \\ \hline
+  Fuselage aerodynamic reference point stationline & 8.78 m & \cite{NASA-CR-166309,NASA-TM-85890} \\ \hline
+  Fuselage aerodynamic reference point waterline   & 5.94 m & \cite{NASA-CR-166309,NASA-TM-85890} \\ \hline
+  \caption{Fuselage data}
+\end{tabularx}
 
-\subsection{Fuselage Aerodynamic Characteristics}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage
+\subsection{Symbols}
+
+\begin{tabularx}{\textwidth}{ L l l l }
+  \hline
+  \textbf{Symbol} & \textbf{Mnemonic} & \textbf{Unit} & \textbf{Description} \\ \hline
+  \endfirsthead
+  \hline
+  \textbf{Symbol} & \textbf{Mnemonic} & \textbf{Unit} & \textbf{Description} \\ \hline
+  \endhead
+  $EK_{XWF}$     & EKXWF  & -     & Rotor wash interference factor (inplane) \\
+  $EK_{YWF}$     & EKYWF  & -     & Rotor wash interference factor (sidewash) \\
+  $EK_{ZWF}$     & EKZWF  & -     & Rotor wash interference factor (downwash) \\
+  & & & \\
+  $\chi_{PMR}$   & CHIPMR & deg   & Rotor wake skew angle \\
+  $D_{WO}$       & DWSHMR & -     & Main rotor uniform downwash \\
+  $\Omega_T$     & OMGTMR & rad/s & Rotor speed \\
+  $R_T$          & RMR    & m     & Rotor radius \\
+  & & & \\
+  $q_{WF}$       & QWF    & Pa    & dynamic pressure at the body \\
+  & & & \\
+  $\alpha_{WF}$  & ALFWF  & deg   & angle of attack \\
+  $\beta_{WF}$   & BETAWF & deg   & sideslip angle \\
+  $\psi_{WF}$    & PSIWF  & deg   & W/T model yaw angle ($\psi_{WF} = -\beta_{WF}$) \\ \hline
+  \caption{Fuselage symbols}
+\end{tabularx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage
+\subsection{Inplane Component of Rotor Wash on the Fuselage}
 
 \csvreader[
   no head,
   longtable=cccc,
   table head=
     \toprule
-    $\alpha$ & $D/q$ & $L/q$ & $M_Y/q$ \\
+    $\chi_{PMR}$ & \multicolumn{3}{c}{$EK_{XWF}$} \\
+    {[deg]} & {AA1FMR=-6.0} & {AA1FMR=0.0} & {AA1FMR=6.0} \\ \midrule
+    \endfirsthead
+    $\chi_{PMR}$ & \multicolumn{3}{c}{$EK_{XWF}$} \\
+    {[deg]} & {AA1FMR=-6.0} & {AA1FMR=0.0} & {AA1FMR=6.0} \\ \midrule
+    \endhead,
+  before first line={},
+  late after line=\\,
+  late after last line=\\ \bottomrule \caption{Inplane component of rotor wash on the fuselage \cite{NASA-CR-166309}},
+  before reading={},
+  after reading={}
+]
+{csv/uh60_fuselage_chipmr_ekxwf.csv}
+{1=\colchi,2=\colii,3=\coliii,4=\coliv}
+{\colchi & \colii & \coliii & \coliv}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=140mm]{eps/uh60_fuselage_chipmr_ekxwf.eps}
+  \caption{Inplane component of rotor wash on the fuselage \cite{NASA-CR-166309}}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage
+\subsection{Downwash Component of Rotor Wash on the Fuselage}
+
+\csvreader[
+  no head,
+  longtable=cccc,
+  table head=
+    \toprule
+    $\chi_{PMR}$ & \multicolumn{3}{c}{$EK_{ZWF}$} \\
+    {[deg]} & {AA1FMR=-6.0} & {AA1FMR=0.0} & {AA1FMR=6.0} \\ \midrule
+    \endfirsthead
+    $\chi_{PMR}$ & \multicolumn{3}{c}{$EK_{ZWF}$} \\
+    {[deg]} & {AA1FMR=-6.0} & {AA1FMR=0.0} & {AA1FMR=6.0} \\ \midrule
+    \endhead,
+  before first line={},
+  late after line=\\,
+  late after last line=\\ \bottomrule \caption{Downwash component of rotor wash on the fuselage \cite{NASA-CR-166309}},
+  before reading={},
+  after reading={}
+]
+{csv/uh60_fuselage_chipmr_ekzwf.csv}
+{1=\colchi,2=\colii,3=\coliii,4=\coliv}
+{\colchi & \colii & \coliii & \coliv}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=140mm]{eps/uh60_fuselage_chipmr_ekzwf.eps}
+  \caption{Downwash component of rotor wash on the fuselage \cite{NASA-CR-166309}}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage
+\subsection{Basic Fuselage Aerodynamic Characteristics}
+
+\csvreader[
+  no head,
+  longtable=cccc,
+  table head=
+    \toprule
+    $\alpha_{WF}$ & $D/q$ & $L/q$ & $M/q$ \\
     {[deg]} & {[m\textsuperscript{2}]} & {[m\textsuperscript{2}]} & {[m\textsuperscript{3}]} \\ \midrule
     \endfirsthead
-    $\alpha$ & $D/q$ & $L/q$ & $M_Y/q$ \\
+    $\alpha_{WF}$ & $D/q$ & $L/q$ & $M/q$ \\
     {[deg]} & {[m\textsuperscript{2}]} & {[m\textsuperscript{2}]} & {[m\textsuperscript{3}]} \\ \midrule
     \endhead,
   before first line={},
@@ -21,9 +129,27 @@ UH-60 aerodynamic characteristics are given in \cite{NASA-CR-166309}.
   before reading={},
   after reading={}
 ]
-{csv/uh60_aero_fuselage.csv}
-{1=\colaoa,2=\colcx,3=\colcy,4=\colcz,5=\colcl,6=\colcm,7=\colcn,8=\coldcx}
+{csv/uh60_aero_fuselage_alfwf.csv}
+{1=\colaoa,2=\colcx,3=\colcz,4=\colcm}
 {\colaoa & \colcx & \colcz & \colcm}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=140mm]{eps/uh60_fuselage_alfwf_dqfmp.eps}
+  \caption{Fuselage drag due to angle of attack \cite{NASA-CR-166309}}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=140mm]{eps/uh60_fuselage_alfwf_lqfmp.eps}
+  \caption{Fuselage lift due to angle of attack \cite{NASA-CR-166309}}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=140mm]{eps/uh60_fuselage_alfwf_mqfmp.eps}
+  \caption{Fuselage pitching moment due to angle of attack \cite{NASA-CR-166309}}
+\end{figure}
 
 \clearpage
 
@@ -32,10 +158,10 @@ UH-60 aerodynamic characteristics are given in \cite{NASA-CR-166309}.
   longtable=cccc,
   table head=
     \toprule
-    $\beta$ & $Y/q$ & $M_X/q$ & $M_Z/q$ \\
+    $\psi_{WF}$ & $Y/q$ & $R/q$ & $N/q$ \\
     {[deg]} & {[m\textsuperscript{2}]} & {[m\textsuperscript{3}]} & {[m\textsuperscript{3}]} \\ \midrule
     \endfirsthead
-    $\beta$ & $Y/q$ & $M_X/q$ & $M_Z/q$ \\
+    $\psi_{WF}$ & $Y/q$ & $R/q$ & $N/q$ \\
     {[deg]} & {[m\textsuperscript{2}]} & {[m\textsuperscript{3}]} & {[m\textsuperscript{3}]} \\ \midrule
     \endhead,
   before first line={},
@@ -44,46 +170,29 @@ UH-60 aerodynamic characteristics are given in \cite{NASA-CR-166309}.
   before reading={},
   after reading={}
 ]
-{csv/uh60_aero_fuselage.csv}
-{1=\colbeta,2=\colcx,3=\colcy,4=\colcz,5=\colcl,6=\colcm,7=\colcn,8=\coldcx}
+{csv/uh60_aero_fuselage_psiwf.csv}
+{1=\colbeta,2=\colcy,3=\colcl,4=\colcn,5=\coldcx}
 {\colbeta & \colcy & \colcl & \colcn}
 
 \begin{figure}
   \centering
-  \includegraphics[width=140mm]{eps/uh60_fuselage_alpha_cx.eps}
-  \caption{Fuselage drag due to angle of attack \cite{NASA-CR-166309}}
-\end{figure}
-
-\begin{figure}
-  \centering
-  \includegraphics[width=140mm]{eps/uh60_fuselage_alpha_cz.eps}
-  \caption{Fuselage lift due to angle of attack \cite{NASA-CR-166309}}
-\end{figure}
-
-\begin{figure}
-  \centering
-  \includegraphics[width=140mm]{eps/uh60_fuselage_alpha_cm.eps}
-  \caption{Fuselage pitching moment due to angle of attack \cite{NASA-CR-166309}}
-\end{figure}
-
-\begin{figure}
-  \centering
-  \includegraphics[width=140mm]{eps/uh60_fuselage_beta_cy.eps}
+  \includegraphics[width=140mm]{eps/uh60_fuselage_psiwf_yqfmp.eps}
   \caption{Fuselage side force due to sideslip \cite{NASA-CR-166309}}
 \end{figure}
 
 \begin{figure}
   \centering
-  \includegraphics[width=140mm]{eps/uh60_fuselage_beta_cl.eps}
+  \includegraphics[width=140mm]{eps/uh60_fuselage_psiwf_rqfmp.eps}
   \caption{Fuselage rolling moment due to sideslip \cite{NASA-CR-166309}}
 \end{figure}
 
 \begin{figure}
   \centering
-  \includegraphics[width=140mm]{eps/uh60_fuselage_beta_cn.eps}
+  \includegraphics[width=140mm]{eps/uh60_fuselage_psiwf_nqfmp.eps}
   \caption{Fuselage yawing moment due to sideslip \cite{NASA-CR-166309}}
 \end{figure}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \clearpage
 \subsection{Fuselage Incremental Aerodynamic Characteristics}
@@ -93,10 +202,10 @@ UH-60 aerodynamic characteristics are given in \cite{NASA-CR-166309}.
   longtable=cccc,
   table head=
     \toprule
-    $\beta$ & $\Delta D/q$ & $\Delta L/q$ & $\Delta M_Y/q$ \\
+    $\psi_{WF}$ & $\Delta D/q$ & $\Delta L/q$ & $\Delta M/q$ \\
     {[deg]} & {[m\textsuperscript{2}]} & {[m\textsuperscript{2}]} & {[m\textsuperscript{3}]} \\ \midrule
     \endfirsthead
-    $\beta$ & $\Delta D/q$ & $\Delta L/q$ & $\Delta M_Y/q$ \\
+    $\psi_{WF}$ & $\Delta D/q$ & $\Delta L/q$ & $\Delta M/q$ \\
     {[deg]} & {[m\textsuperscript{2}]} & {[m\textsuperscript{2}]} & {[m\textsuperscript{3}]} \\ \midrule
     \endhead,
   before first line={},
@@ -105,100 +214,24 @@ UH-60 aerodynamic characteristics are given in \cite{NASA-CR-166309}.
   before reading={},
   after reading={}
 ]
-{csv/uh60_aero_fuselage_3.csv}
+{csv/uh60_aero_fuselage_psiwf3.csv}
 {1=\colbeta,2=\coldcx,3=\coldcz,4=\coldcm}
 {\colbeta & \coldcx & \coldcz & \coldcm}
 
 \begin{figure}
   \centering
-  \includegraphics[width=140mm]{eps/uh60_fuselage_beta_dcx.eps}
+  \includegraphics[width=140mm]{eps/uh60_fuselage_psiwf_ddqfmp.eps}
   \caption{Fuselage incremental drag due to sideslip \cite{NASA-CR-166309}}
 \end{figure}
 
 \begin{figure}
   \centering
-  \includegraphics[width=140mm]{eps/uh60_fuselage_beta_dcz.eps}
+  \includegraphics[width=140mm]{eps/uh60_fuselage_psiwf_dlqfmp.eps}
   \caption{Fuselage incremental lift due to sideslip \cite{NASA-CR-166309}}
 \end{figure}
 
 \begin{figure}
   \centering
-  \includegraphics[width=140mm]{eps/uh60_fuselage_beta_dcm.eps}
+  \includegraphics[width=140mm]{eps/uh60_fuselage_psiwf_dmqfmp.eps}
   \caption{Fuselage incremental pitching moment due to sideslip \cite{NASA-CR-166309}}
-\end{figure}
-
-\clearpage
-\subsection{Horizontal Tail Aerodynamic Coefficients}
-
-Horizontal tail reference area: 4.18 [m\textsuperscript{2}]
-
-\csvreader[
-  no head,
-  longtable=ccc,
-  table head=
-    \toprule
-    $\alpha$ & $C_{X,h}$ & $C_{Z,h}$ \\
-    {[deg]} & {[-]} & {[-]} \\ \midrule
-    \endfirsthead
-    $\alpha$ & $C_{X,h}$ & $C_{Z,h}$ \\
-    {[deg]} & {[-]} & {[-]} \\ \midrule
-    \endhead,
-  before first line={},
-  late after line=\\,
-  late after last line=\\ \bottomrule \caption{Horizontal tail aerodynamic coefficients \cite{NASA-CR-166309}},
-  before reading={},
-  after reading={}
-]
-{csv/uh60_aero_empennage.csv}
-{1=\colaoa,2=\colhcx,3=\colhcz,4=\colvcx,5=\colvcy}
-{\colaoa & \colhcx & \colhcz}
-
-\begin{figure}
-  \centering
-  \includegraphics[width=140mm]{eps/uh60_stab_h_cx.eps}
-  \caption{Horizontal tail drag coefficient due to angle of attack \cite{NASA-CR-166309}}
-\end{figure}
-
-\begin{figure}
-  \centering
-  \includegraphics[width=140mm]{eps/uh60_stab_h_cz.eps}
-  \caption{Horizontal tail lift coefficient due to angle of attack \cite{NASA-CR-166309}}
-\end{figure}
-
-\clearpage
-\subsection{Vertical Tail Aerodynamic Coefficients}
-
-Vertical tail reference area: 3.00 [m\textsuperscript{2}]
-
-\csvreader[
-  no head,
-  longtable=ccc,
-  table head=
-    \toprule
-    $\beta$ & $C_{X,v}$ & $C_{Y,v}$ \\
-    {[deg]} & {[-]} & {[-]} \\ \midrule
-    \endfirsthead
-    $\beta$ & $C_{X,v}$ & $C_{Y,v}$ \\
-    {[deg]} & {[-]} & {[-]} \\ \midrule
-    \endhead,
-  before first line={},
-  late after line=\\,
-  late after last line=\\ \bottomrule \caption{Vertical tail aerodynamic coefficients \cite{NASA-CR-166309}},
-  before reading={},
-  after reading={}
-]
-{csv/uh60_aero_empennage.csv}
-{1=\colbeta,2=\colhcx,3=\colhcz,4=\colvcx,5=\colvcy}
-{\colbeta & \colvcx & \colvcy}
-
-\begin{figure}
-  \centering
-  \includegraphics[width=140mm]{eps/uh60_stab_v_cx.eps}
-  \caption{Vertical tail drag coefficient due to sideslip \cite{NASA-CR-166309}}
-\end{figure}
-
-\begin{figure}
-  \centering
-  \includegraphics[width=140mm]{eps/uh60_stab_v_cy.eps}
-  \caption{Vertical tail side force coefficient due to sideslip \cite{NASA-CR-166309}}
 \end{figure}
