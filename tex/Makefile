@@ -1,7 +1,7 @@
 TEX_FILES=\
 	data.tex \
-	data_uh60.tex \
 	fdm.tex \
+	fdm_uh60.tex \
 	propellers.tex \
 	rotor.tex \
 	terrain.tex
