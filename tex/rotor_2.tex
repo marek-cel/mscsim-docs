@@ -1,5 +1,41 @@
 \chapter{Actuator Disc Method}
 
+\section{Coordinate Systems}
+
+\subsection{Rotor Axis System}
+
+Origin of the Rotor Axis System is coincident with the rotor hub center, the x-axis is positive in forward direction, the y-axis is positive right and z-axis is positive downward direction and it is coincident with the rotor shaft axis.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=110mm]{eps/coordinate_system_RAS.eps}
+  \caption{Rotor Axis System}
+\end{figure}
+
+\subsection{Rotor-Wind Axis System}
+
+Rotor-Wind Axis System is very much like Rotor Axis System, the only difference is that it is rotated about z-axis in such a manner that x-axis points directly into relative wind, so there is no lateral airspeed component.
+
+\subsection{Control Axis System}
+
+For most purposes, using the Rotor Axis System causes unnecessary complications. It is convenient to use no cyclic feathering axes system. \cite{GessowMyers1985} Origin of the Control Axis System is coincident with the origin of the Rotor Axis System, but it is rotated by angles of the swashplate roll and pitch so there is no cyclic feathering in this coordinate system.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=120mm]{eps/rotor_planes.eps}
+  \caption{Rotor reference planes}
+\end{figure}
+
+\subsection{Disc Axis System}
+
+Origin of the Disc Axis System is coincident with the origin of the Rotor Axis System, but it is rotated by angles of the rotor cone roll and pitch in such a manner that z-axis is perpendicular to the tip path plane so there is no cyclic flapping in this coordinate system.
+
+\subsection{Control-Wind Axis System}
+
+Control-Wind Axis System is very much like Control Axis System, the only difference is that it is rotated about z-axis in such a manner that x-axis points directly into relative wind, so there is no lateral airspeed component.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Assumptions}
 
 Following assumptions are made for the purpose of modeling helicopter rotor aerodynamics:
@@ -12,6 +48,8 @@ Following assumptions are made for the purpose of modeling helicopter rotor aero
   \item[---] airflow is considered to be quasi-steady and incompressible,
   \item[---] thrust is considered to be parallel to the z-axis of the Control Axis System and magnitude of the thrust is considered to be magnitude of the resulting rotor force. \cite{GessowMyers1985}
 \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Momentum Theory}
 
@@ -214,6 +252,8 @@ The wake angle is given by the following formula:
 \end{equation}
 
 Where $\lambda_{i0}$ is given by formula (\ref{eq-aero-lambda-i-5}).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Forces Acting on the Blade Segment}
 
@@ -440,6 +480,8 @@ Expressions for air velocity at the blade segment can be written in the followin
   - p_{cw} r \sin \Psi + q_{cw} r \cos \Psi
 \end{align}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Rotor Thrust}
 
 Assuming that for small angles:
@@ -589,13 +631,19 @@ Using expression (\ref{eq-aero-thrust-coef}) rotor thrust coefficient is given b
 
 Where $s$ is rotor solidity.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Rotor H Force}
 
 %TODO
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Rotor Y Force}
 
 %TODO
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Rotor Torque}
 
@@ -722,6 +770,8 @@ Rotor torque coefficient can be written as:
     - \frac{1}{3} \mu \beta_0 \beta_{1s}
   \right]
 \end{multline}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Flapping Coefficients}
 
