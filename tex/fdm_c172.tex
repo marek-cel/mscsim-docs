@@ -1,0 +1,56 @@
+\documentclass[12pt,a4paper]{article}
+\special{papersize=210mm,297mm}
+
+\usepackage{mscsim}
+
+\title{Cessna 172 - Flight Dynamics Model Data}
+\author{Marek Cel}
+\date{}
+
+\begin{document}
+  
+  \begin{titlepage}
+    \centering
+    {\huge Cessna 172 \par Flight Dynamics Model Data\par}
+  \end{titlepage}
+  
+  %\maketitle
+
+  \noindent Copyright \copyright{} \the\year{} Marek M. Cel. All rights reserved.
+
+  \noindent Author: Marek M. Cel \\
+  Revision: 10 \\
+  Date: \today
+
+  \input{license_cc0}
+  
+  \clearpage
+  \newgeometry{margin=1cm}
+  \thispagestyle{empty}
+  
+  \begin{figure}[p]
+    \centering
+    \includegraphics[width=140mm]{eps/c172_3view.eps}
+    \caption{Cessna 172}
+  \end{figure}
+
+  \restoregeometry
+
+  {
+    \clearpage
+    \setlength{\parskip}{0em}
+    \pdfbookmark[1]{\contentsname}{toc}
+    \tableofcontents
+  }
+
+  \include{fdm_c172_1}
+  \include{fdm_c172_2}
+  \include{fdm_c172_3}
+  \include{fdm_c172_4}
+  
+  \clearpage
+  \bibliography{bibliography} 
+  \addcontentsline{toc}{section}{Bibliography}
+  \bibliographystyle{vancouver}
+  
+\end{document}

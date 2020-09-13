@@ -1,6 +1,8 @@
 TEX_FILES=\
 	data.tex \
 	fdm.tex \
+	fdm_c172.tex \
+	fdm_pw5.tex \
 	fdm_uh60.tex \
 	propellers.tex \
 	rotor.tex \
