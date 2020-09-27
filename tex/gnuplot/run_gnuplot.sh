@@ -19,6 +19,15 @@
 #   xfoil_naca0012_cz.gnuplot
 
 ################################################################################
+# data_pw5
+################################################################################
+
+gnuplot \
+  airfoil_FX711530.gnuplot \
+  airfoil_NACA64012.gnuplot \
+  airfoil_NN1817.gnuplot
+
+################################################################################
 # data_uh60
 ################################################################################
 
@@ -49,19 +58,19 @@
 #   uh60_fuselage_chipmr_ekxwf.gnuplot \
 #   uh60_fuselage_chipmr_ekzwf.gnuplot
 
-gnuplot \
-  uh60_stab_h_cx.gnuplot \
-  uh60_stab_h_cz.gnuplot \
-  uh60_stab_h_f_downwash.gnuplot \
-  uh60_stab_h_mr_inplane.gnuplot \
-  uh60_stab_h_mr_downwash.gnuplot \
-  uh60_stab_h_press_loss.gnuplot
+# gnuplot \
+#   uh60_stab_h_cx.gnuplot \
+#   uh60_stab_h_cz.gnuplot \
+#   uh60_stab_h_f_downwash.gnuplot \
+#   uh60_stab_h_mr_inplane.gnuplot \
+#   uh60_stab_h_mr_downwash.gnuplot \
+#   uh60_stab_h_press_loss.gnuplot
 
-gnuplot \
-  uh60_stab_v_cx.gnuplot \
-  uh60_stab_v_cy.gnuplot \
-  uh60_stab_v_f_sidewash.gnuplot \
-  uh60_stab_v_press_loss.gnuplot
+# gnuplot \
+#   uh60_stab_v_cx.gnuplot \
+#   uh60_stab_v_cy.gnuplot \
+#   uh60_stab_v_f_sidewash.gnuplot \
+#   uh60_stab_v_press_loss.gnuplot
 
 
 ################################################################################

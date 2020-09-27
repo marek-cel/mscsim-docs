@@ -1,0 +1,88 @@
+\section{Airfoils}
+
+\subsection{NN18-17}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=127mm]{eps/airfoil_NN1817.eps}
+  \caption{NN18-17}
+\end{figure}
+
+\csvreader[
+  no head,
+  longtable=cccc,
+  table head=
+    \toprule
+    \multicolumn{2}{c}{\bfseries Upper surface} & \multicolumn{2}{c}{\bfseries Lower surface} \\
+    x/c & y/c & x/c & y/c \\ \midrule
+    \endfirsthead
+    \multicolumn{2}{c}{\bfseries Upper surface} & \multicolumn{2}{c}{\bfseries Lower surface} \\
+    x/c & y/c & x/c & y/c \\ \midrule
+    \endhead,
+  before first line={},
+  late after line=\\,
+  late after last line=\\ \bottomrule \caption{NN18-17 \cite{Brzezinski1998}},
+  before reading={},
+  after reading={}
+]
+{csv/airfoil_NN1817.csv}
+{1=\colxu,2=\colyu,3=\colxl,4=\colyl}
+{\colxu & \colyu & \colxl & \colyl}
+
+\subsection{Wortmann FX 71-L-150/30}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=127mm]{eps/airfoil_FX711530.eps}
+  \caption{FX 71-L-150/30}
+\end{figure}
+
+\csvreader[
+  no head,
+  longtable=cccc,
+  table head=
+    \toprule
+    \multicolumn{2}{c}{\bfseries Upper surface} & \multicolumn{2}{c}{\bfseries Lower surface} \\
+    x/c & y/c & x/c & y/c \\ \midrule
+    \endfirsthead
+    \multicolumn{2}{c}{\bfseries Upper surface} & \multicolumn{2}{c}{\bfseries Lower surface} \\
+    x/c & y/c & x/c & y/c \\ \midrule
+    \endhead,
+  before first line={},
+  late after line=\\,
+  late after last line=\\ \bottomrule \caption{FX 71-L-150/30 \cite{Brzezinski1998}},
+  before reading={},
+  after reading={}
+]
+{csv/airfoil_FX711530.csv}
+{1=\colxu,2=\colyu,3=\colxl,4=\colyl}
+{\colxu & \colyu & \colxl & \colyl}
+
+\subsection{NACA 64\textsubscript{1}-012}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=127mm]{eps/airfoil_NACA64012.eps}
+  \caption{NACA 64\textsubscript{1}-012}
+\end{figure}
+
+\csvreader[
+  no head,
+  longtable=cccc,
+  table head=
+    \toprule
+    \multicolumn{2}{c}{\bfseries Upper surface} & \multicolumn{2}{c}{\bfseries Lower surface} \\
+    x/c & y/c & x/c & y/c \\ \midrule
+    \endfirsthead
+    \multicolumn{2}{c}{\bfseries Upper surface} & \multicolumn{2}{c}{\bfseries Lower surface} \\
+    x/c & y/c & x/c & y/c \\ \midrule
+    \endhead,
+  before first line={},
+  late after line=\\,
+  late after last line=\\ \bottomrule \caption{NACA 64\textsubscript{1}-012 \cite{NACA-TR-824}},
+  before reading={},
+  after reading={}
+]
+{csv/airfoil_NACA64012.csv}
+{1=\colxu,2=\colyu,3=\colxl,4=\colyl}
+{\colxu & \colyu & \colxl & \colyl}
