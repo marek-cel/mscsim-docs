@@ -18,14 +18,17 @@
 #   xfoil_naca0012_cx.gnuplot \
 #   xfoil_naca0012_cz.gnuplot
 
+gnuplot \
+  linear_least_squares.gnuplot
+
 ################################################################################
 # data_pw5
 ################################################################################
 
-gnuplot \
-  airfoil_FX711530.gnuplot \
-  airfoil_NACA64012.gnuplot \
-  airfoil_NN1817.gnuplot
+# gnuplot \
+#   airfoil_FX711530.gnuplot \
+#   airfoil_NACA64012.gnuplot \
+#   airfoil_NN1817.gnuplot
 
 ################################################################################
 # data_uh60
