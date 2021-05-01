@@ -2,6 +2,16 @@
 
 System identification can be defined as the deduction of system characteristics from measured data. \cite{NASA-RP-1138} Process of system identification includes performing identification experiment to obtain data, determining an appropriate form of the model and estimating the unknown parameters of the model with some statistically based method. \cite{SoderstromStoica1989}
 
-\section{Least Squares Method}
+\section{Linear Regression}
 
-%TODO
+\begin{align}
+  a &= \frac{\sum_{i=1}^{n}{ \left( x_i - \bar{x} \right) \left( y_i - \bar{y} \right) }}{\sum_{i=1}^{n}{ \left( x_i - \bar{x} \right)^2 }} \\
+  b &= \bar y - a \bar x
+\end{align}
+
+Where:
+
+\begin{align}
+  \bar{x} &= \frac{\sum_{i=1}^{n}{ x_i }}{ n } \\
+  \bar{y} &= \frac{\sum_{i=1}^{n}{ y_i }}{ n }
+\end{align}
